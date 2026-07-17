@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADu0lEQVR42q1Ta09UVxSdmv6DNk36C2o/YRtqo31ZwNoHbSkJjU3TNJZPTRttYlPTxoiJ9gEaFDUF5srUuVNmNAqMyCg+MmgwMANEghiMMuCAZCAg3sfcx1xey33OZR4YGY2Zk6zMPnuvs9acffdxPOsCsAY9UinC0lcsduR6ISy3YCjux+14M8XNOTeo6MCL2h3joXlXV1icc4OPG63WEl8CXxI+oTin4h+J8VcKPRa2nUpwsJjlcmbwzzktj4n2dajoJbCY5XJmMD9s/l52ykKZz8bXFM8PG7ueY1LUlwC8kJlje4wYo9d6TBQ3WfjstIVOiikXSXEz+X3qy9lGsZIwgLBUksoNGxtIDEuEHWM6dkxoTNzGqLE+fVbZgpAcpvPCqgZEOEgELCNIRnmLUaMqNmRACCZQFjRR1mHymHLMpBK96mvEa8s415DFQNmTQcSVK9pCqc9aZB+VYXOjjqL/TST3JV5jodavzDFuGkr16gY9yvZM8jcn+UimcGj4IA5HqlbkCo7LeMygIouBVJokWiEZRSTwoZg2+S3kx66epuSe1951KkiEpLRBSPludYM+dW2SON6pcJH8Opn9Pgm8tkFQMXI1w6A7/vpKUTG2G+LkCMeB0VlclxYYsTeocpH3G5SU4OV+AZduHLf/vdtEkUvGRpeGtvPL4l3SEqpGddJ6aGNqnwOemVdpoxKAmijQMsXJrRc1LrQ/oIEeGY+7B4+g99YhFHiobQ0y/qbae/8ZONys2AbnpoHqe2Ba3MAbs98EbXbypHMCOBblZCGgc9FAV4KPZWZr3mnQsKdVRRvVNtFNfvEtt6h+DKi7bxt4Jn9Mt6kCayh5lQBqE9TADLafscdxsN9EMGzHQvt+ONv/wnqnikBnnGp2/lOXBLl9BqgcSYqff/yV81YtilPjra5ZlLoNfvBbGlNrSMfFkC0UCeVhLLwWbwsqWq6pVNOIY99iS72EA3XTII0Ib01yUT9/psMxGsm9X4iJCMXYSge8ZKR2KcDNOP68YLfo88YZBt73H07KvKZ2K/CemMXWEwbPb3QqUwVucy/TLBQTPzk2N86to80EYalcNHSfR8KA+ADXj03irHsW+/xGqvcVNYP44+gQjzeR2O4mDX4PcY/EMOB+AK8oYZvH0JgW02Ta/BaF4lw5JQwCsmH816OY3lmdlUOPb+HNWnn+LUGpSbWJCjcJeBrKnRMMT+Xl18t4o1ZSVn6H7DfQi0Uz+r1L72coFhNRlnsS9wPRtNb9K83lC3K9w+FwPAIIUIRh19D9kQAAAABJRU5ErkJggg==" />
+<meta charset="UTF-8">
+<title>The Breath — Energy Manipulation</title>
+</head>
+<body style="margin:0;padding:24px;background:#0d0d0d;display:flex;justify-content:center;font-family:sans-serif;">
+
+<svg width="680" height="780" viewBox="0 0 680 780" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Meditating figure absorbing energy like a sponge and projecting it into a talisman</title>
+<desc>A 20-second loop showing the foundation of energy work. Phase 1: Inhaling energy through the entire body like a sponge. Phase 2: Feeling the absorbed energy. Phase 3: Exhaling and directing energy outward to charge a talisman. Phase 4: Drawing energy directly from a Sun source.</desc>
+
+<defs>
+  <!-- Glow Filter for energy and talismans -->
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="8" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  
+  <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="15" result="blur" />
+    <feComponentTransfer in="blur" result="glow">
+      <feFuncA type="linear" slope="1.5"/>
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Sun Gradient -->
+  <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+    <stop offset="30%" stop-color="#FFF59D" stop-opacity="0.9"/>
+    <stop offset="70%" stop-color="#FBC02D" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#F57F17" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Reusable Base Figure (Dark Silhouette) -->
+  <g id="meditating-figure">
+    <ellipse cx="300" cy="720" rx="115" ry="13" fill="#888780" opacity="0.15"/>
+    <path d="M215 700 Q205 660 220 630 Q235 615 260 615 L260 640 Q245 655 245 680 Q245 700 260 705 Z" fill="#5F5E5A" opacity="0.4"/>
+    <path d="M385 700 Q395 660 380 630 Q365 615 340 615 L340 640 Q355 655 355 680 Q355 700 340 705 Z" fill="#5F5E5A" opacity="0.4"/>
+    <path d="M225 615 Q210 560 225 520 Q235 495 260 480 L260 500 Q245 515 240 540 Q235 570 245 605 Q250 615 260 618 Z" fill="#5F5E5A" opacity="0.38"/>
+    <path d="M375 615 Q390 560 375 520 Q365 495 340 480 L340 500 Q355 515 360 540 Q365 570 355 605 Q350 615 340 618 Z" fill="#5F5E5A" opacity="0.38"/>
+    <path d="M245 630 Q225 590 235 550 L250 500 Q235 480 238 460 Q255 452 300 450 Q345 452 362 460 Q365 480 350 500 L365 550 Q375 590 355 630 Q300 650 245 630 Z" fill="#6B6A65" opacity="0.4"/>
+    <path d="M258 460 Q248 400 262 355 Q275 330 300 322 Q325 330 338 355 Q352 400 342 460 Q321 470 300 471 Q279 470 258 460 Z" fill="#888780" opacity="0.32"/>
+    <circle cx="300" cy="278" r="42" fill="#B4B2A9" opacity="0.4"/>
+    <path d="M262 265 Q262 224 300 218 Q338 224 338 265 Q338 238 300 232 Q262 238 262 265 Z" fill="#2C2C2A" opacity="0.55"/>
+  </g>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="680" height="780" fill="#0d0d0d"/>
+
+<!-- ================= THE SUN (Source of Energy) Phase 4 ================= -->
+<circle cx="300" cy="150" r="60" fill="url(#sunGrad)" filter="url(#heavyGlow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0; 1; 1; 0" keyTimes="0; 0.73; 0.75; 0.78; 0.95; 1" dur="20s" repeatCount="indefinite"/>
+</circle>
+
+<!-- ================= INWARD ENERGY FLOW (The Sponge Effect) ================= -->
+<!-- Visible in Phase 1 (General) and Phase 4 (From Sun) -->
+<g stroke="#42e3f5" stroke-width="3" stroke-dasharray="8 20" stroke-linecap="round" filter="url(#glow)">
+  <animate attributeName="opacity" values="1; 1; 0; 0; 0; 0; 1; 1" keyTimes="0; 0.20; 0.25; 0.50; 0.75; 0.80; 0.95; 1" dur="20s" repeatCount="indefinite" />
+  <!-- Animates the dashes moving TOWARDS the center (negative offset moves from start to end) -->
+  <animate attributeName="stroke-dashoffset" values="0; -60" dur="1s" repeatCount="indefinite" />
+  
+  <!-- Rays coming from all sides to the body -->
+  <line x1="50" y1="450" x2="220" y2="450" />
+  <line x1="550" y1="450" x2="380" y2="450" />
+  <line x1="100" y1="200" x2="250" y2="350" />
+  <line x1="500" y1="200" x2="350" y2="350" />
+  <line x1="100" y1="650" x2="250" y2="550" />
+  <line x1="500" y1="650" x2="350" y2="550" />
+  <!-- Top ray (Golden when from sun in Phase 4) -->
+  <line x1="300" y1="180" x2="300" y2="300">
+    <animate attributeName="stroke" values="#42e3f5; #42e3f5; #42e3f5; #FFF59D; #FFF59D; #42e3f5" keyTimes="0; 0.25; 0.75; 0.78; 0.95; 1" dur="20s" repeatCount="indefinite" />
+  </line>
+</g>
+
+<!-- ================= THE MEDITATING FIGURE (Energy Vessel) ================= -->
+<!-- Base figure -->
+<use href="#meditating-figure" />
+
+<!-- Glowing body overlay representing absorbed energy -->
+<!-- Absorbs in P1, Holds in P2, Depletes in P3, Re-absorbs in P4 -->
+<use href="#meditating-figure" fill="#42e3f5" filter="url(#glow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0.8; 0.8; 0.8; 0; 0; 0.9; 0" keyTimes="0; 0.20; 0.25; 0.45; 0.55; 0.75; 0.95; 1" dur="20s" repeatCount="indefinite"/>
+  <!-- Color changes to golden in Phase 4 when absorbing from the Sun -->
+  <animate attributeName="fill" values="#42e3f5; #42e3f5; #42e3f5; #42e3f5; #42e3f5; #FFF59D; #FFF59D; #42e3f5" keyTimes="0; 0.25; 0.50; 0.70; 0.75; 0.80; 0.95; 1" dur="20s" repeatCount="indefinite"/>
+</use>
+
+<!-- ================= OUTWARD ENERGY FLOW (Exhale / Projection) Phase 3 ================= -->
+<g stroke="#42e3f5" stroke-width="4" stroke-dasharray="10 20" stroke-linecap="round" filter="url(#glow)">
+  <animate attributeName="opacity" values="0; 0; 0; 1; 1; 0; 0" keyTimes="0; 0.45; 0.50; 0.55; 0.70; 0.73; 1" dur="20s" repeatCount="indefinite" />
+  <animate attributeName="stroke-dashoffset" values="0; -60" dur="0.8s" repeatCount="indefinite" />
+  <!-- Beams pointing FROM body TO the talisman -->
+  <line x1="300" y1="450" x2="300" y2="580" />
+  <line x1="260" y1="520" x2="285" y2="580" />
+  <line x1="340" y1="520" x2="315" y2="580" />
+</g>
+
+<!-- ================= THE TALISMAN / SIGIL (Neutral Crystal) ================= -->
+<!-- Appears and gets charged during Phase 3 -->
+<g transform="translate(300, 620)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0; 1; 1; 0; 0" keyTimes="0; 0.45; 0.48; 0.60; 0.73; 0.75; 1" dur="20s" repeatCount="indefinite" />
+  
+  <!-- Outer glowing rings -->
+  <circle cx="0" cy="0" r="30" fill="none" stroke="#42e3f5" stroke-width="2" filter="url(#glow)">
+    <animateTransform attributeName="transform" type="rotate" values="0; 360" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="0" cy="0" r="22" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="4 4">
+    <animateTransform attributeName="transform" type="rotate" values="360; 0" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Central Crystal / Neutral Amulet Shape -->
+  <polygon points="0,-18 12,0 0,18 -12,0" fill="none" stroke="#FFFFFF" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="0" cy="0" r="5" fill="#42e3f5" filter="url(#glow)">
+    <!-- Pulses as it gets charged -->
+    <animate attributeName="r" values="3; 8; 3" dur="1s" repeatCount="indefinite" />
+  </circle>
+</g>
+
+
+<!-- ================= TEXTS & LABELS ================= -->
+<text x="340" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#F0F0F0" text-anchor="middle">The Breath: Energy Foundation</text>
+
+<!-- Phase 1 Text -->
+<text x="340" y="85" font-family="sans-serif" font-size="14" fill="#42e3f5" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 1 (Inhale): Your entire body absorbs energy like a dry sponge.</tspan>
+  <animate attributeName="opacity" values="1; 1; 0; 0; 0; 0" keyTimes="0; 0.23; 0.25; 0.98; 0.99; 1" dur="20s" repeatCount="indefinite" />
+</text>
+
+<!-- Phase 2 Text -->
+<text x="340" y="85" font-family="sans-serif" font-size="14" fill="#FFFFFF" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 2 (Hold): Focus strictly on the feeling. Do not visualize, just feel it.</tspan>
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.24; 0.26; 0.48; 0.50; 1" dur="20s" repeatCount="indefinite" />
+</text>
+
+<!-- Phase 3 Text -->
+<text x="340" y="85" font-family="sans-serif" font-size="14" fill="#42e3f5" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 3 (Exhale): Direct energy outward to charge a talisman or to heal.</tspan>
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.49; 0.51; 0.73; 0.75; 1" dur="20s" repeatCount="indefinite" />
+</text>
+
+<!-- Phase 4 Text -->
+<text x="340" y="85" font-family="sans-serif" font-size="14" fill="#FFF59D" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 4 (Advanced): Draw energy directly from the Sun or other sources.</tspan>
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.74; 0.76; 0.98; 1" dur="20s" repeatCount="indefinite" />
+</text>
+
+
+<!-- Sidebar Notes -->
+<text x="40" y="320" font-family="sans-serif" font-size="12" fill="#888" width="150" opacity="0.7">
+  <tspan x="40" dy="0">"The breath acts as</tspan>
+  <tspan x="40" dy="18">a focal point for</tspan>
+  <tspan x="40" dy="18">absorbing energy."</tspan>
+  <tspan x="40" dy="36" fill="#ccc">Basis of all magick.</tspan>
+</text>
+
+<text x="500" y="320" font-family="sans-serif" font-size="12" fill="#888" width="150" opacity="0.7">
+  <tspan x="500" dy="0">Caution:</tspan>
+  <tspan x="500" dy="18" fill="#ccc">Exhaling energy</tspan>
+  <tspan x="500" dy="18" fill="#ccc">can be tiring.</tspan>
+  <tspan x="500" dy="18">Use it deliberately</tspan>
+  <tspan x="500" dy="18">for charging/healing.</tspan>
+</text>
+
+</svg>
+</body>
+</html>

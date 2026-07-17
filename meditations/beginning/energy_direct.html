@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADu0lEQVR42q1Ta09UVxSdmv6DNk36C2o/YRtqo31ZwNoHbSkJjU3TNJZPTRttYlPTxoiJ9gEaFDUF5srUuVNmNAqMyCg+MmgwMANEghiMMuCAZCAg3sfcx1xey33OZR4YGY2Zk6zMPnuvs9acffdxPOsCsAY9UinC0lcsduR6ISy3YCjux+14M8XNOTeo6MCL2h3joXlXV1icc4OPG63WEl8CXxI+oTin4h+J8VcKPRa2nUpwsJjlcmbwzzktj4n2dajoJbCY5XJmMD9s/l52ykKZz8bXFM8PG7ueY1LUlwC8kJlje4wYo9d6TBQ3WfjstIVOiikXSXEz+X3qy9lGsZIwgLBUksoNGxtIDEuEHWM6dkxoTNzGqLE+fVbZgpAcpvPCqgZEOEgELCNIRnmLUaMqNmRACCZQFjRR1mHymHLMpBK96mvEa8s415DFQNmTQcSVK9pCqc9aZB+VYXOjjqL/TST3JV5jodavzDFuGkr16gY9yvZM8jcn+UimcGj4IA5HqlbkCo7LeMygIouBVJokWiEZRSTwoZg2+S3kx66epuSe1951KkiEpLRBSPludYM+dW2SON6pcJH8Opn9Pgm8tkFQMXI1w6A7/vpKUTG2G+LkCMeB0VlclxYYsTeocpH3G5SU4OV+AZduHLf/vdtEkUvGRpeGtvPL4l3SEqpGddJ6aGNqnwOemVdpoxKAmijQMsXJrRc1LrQ/oIEeGY+7B4+g99YhFHiobQ0y/qbae/8ZONys2AbnpoHqe2Ba3MAbs98EbXbypHMCOBblZCGgc9FAV4KPZWZr3mnQsKdVRRvVNtFNfvEtt6h+DKi7bxt4Jn9Mt6kCayh5lQBqE9TADLafscdxsN9EMGzHQvt+ONv/wnqnikBnnGp2/lOXBLl9BqgcSYqff/yV81YtilPjra5ZlLoNfvBbGlNrSMfFkC0UCeVhLLwWbwsqWq6pVNOIY99iS72EA3XTII0Ib01yUT9/psMxGsm9X4iJCMXYSge8ZKR2KcDNOP68YLfo88YZBt73H07KvKZ2K/CemMXWEwbPb3QqUwVucy/TLBQTPzk2N86to80EYalcNHSfR8KA+ADXj03irHsW+/xGqvcVNYP44+gQjzeR2O4mDX4PcY/EMOB+AK8oYZvH0JgW02Ta/BaF4lw5JQwCsmH816OY3lmdlUOPb+HNWnn+LUGpSbWJCjcJeBrKnRMMT+Xl18t4o1ZSVn6H7DfQi0Uz+r1L72coFhNRlnsS9wPRtNb9K83lC3K9w+FwPAIIUIRh19D9kQAAAABJRU5ErkJggg==" />
+<meta charset="UTF-8">
+<title>Directing Energy — Meditation</title>
+</head>
+<body style="margin:0;padding:24px;background:#0d0d0d;display:flex;justify-content:center;font-family:sans-serif;">
+
+<svg width="680" height="780" viewBox="0 0 680 780" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Meditating figure demonstrating how to direct energy throughout the body and aura</title>
+<desc>A 24-second continuous loop showing energy moving from left to right, top to bottom, expanding into the aura, and finally shooting upwards out of the crown chakra to prevent pooling in the body.</desc>
+
+<defs>
+  <!-- Glow Filter for energy effects -->
+  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="12" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Aura Radial Gradient -->
+  <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#E1F5FE" stop-opacity="0.6"/>
+    <stop offset="40%" stop-color="#81D4FA" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#29B6F6" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Crown Energy Beam Gradient -->
+  <linearGradient id="beamGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+    <stop offset="50%" stop-color="#F2E230" stop-opacity="0.8"/>
+    <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
+
+  <!-- Clip Paths for Body Halves -->
+  <clipPath id="left-half"><rect x="0" y="0" width="300" height="780"/></clipPath>
+  <clipPath id="right-half"><rect x="300" y="0" width="380" height="780"/></clipPath>
+  <clipPath id="top-half"><rect x="0" y="0" width="680" height="465"/></clipPath>
+  <clipPath id="bottom-half"><rect x="0" y="465" width="680" height="315"/></clipPath>
+
+  <!-- Base Meditating Silhouette reused from previous design -->
+  <g id="meditating-figure">
+    <ellipse cx="300" cy="720" rx="115" ry="13" />
+    <path d="M215 700 Q205 660 220 630 Q235 615 260 615 L260 640 Q245 655 245 680 Q245 700 260 705 Z" />
+    <path d="M385 700 Q395 660 380 630 Q365 615 340 615 L340 640 Q355 655 355 680 Q355 700 340 705 Z" />
+    <path d="M225 615 Q210 560 225 520 Q235 495 260 480 L260 500 Q245 515 240 540 Q235 570 245 605 Q250 615 260 618 Z" />
+    <path d="M375 615 Q390 560 375 520 Q365 495 340 480 L340 500 Q355 515 360 540 Q365 570 355 605 Q350 615 340 618 Z" />
+    <path d="M245 630 Q225 590 235 550 L250 500 Q235 480 238 460 Q255 452 300 450 Q345 452 362 460 Q365 480 350 500 L365 550 Q375 590 355 630 Q300 650 245 630 Z" />
+    <path d="M258 460 Q248 400 262 355 Q275 330 300 322 Q325 330 338 355 Q352 400 342 460 Q321 470 300 471 Q279 470 258 460 Z" />
+    <circle cx="300" cy="278" r="42" />
+    <path d="M262 265 Q262 224 300 218 Q338 224 338 265 Q338 238 300 232 Q262 238 262 265 Z" />
+  </g>
+</defs>
+
+<!-- ================= ANIMATED AURA (Phase 3) ================= -->
+<circle cx="300" cy="460" r="100" fill="url(#auraGrad)" opacity="0">
+  <animate attributeName="r" values="100; 100; 100; 340; 220; 340; 100" keyTimes="0; 0.50; 0.55; 0.60; 0.65; 0.70; 0.75" dur="24s" repeatCount="indefinite" />
+  <animate attributeName="opacity" values="0; 0; 0; 0.8; 0.4; 0.8; 0" keyTimes="0; 0.50; 0.52; 0.60; 0.65; 0.70; 0.75" dur="24s" repeatCount="indefinite" />
+</circle>
+
+<!-- Base Dark Figure -->
+<use href="#meditating-figure" fill="#222" opacity="0.8"/>
+
+<!-- ================= PHASE 1: Left & Right Halves ================= -->
+<g fill="#42e3f5" filter="url(#glow)">
+  <!-- Left Side Glow -->
+  <use href="#meditating-figure" clip-path="url(#left-half)" opacity="0">
+    <animate attributeName="opacity" values="0; 1; 1; 0.2; 0; 0" keyTimes="0; 0.05; 0.12; 0.18; 0.22; 1" dur="24s" repeatCount="indefinite"/>
+  </use>
+  <!-- Right Side Glow -->
+  <use href="#meditating-figure" clip-path="url(#right-half)" opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 0.2; 0; 0" keyTimes="0; 0.08; 0.12; 0.18; 0.22; 1" dur="24s" repeatCount="indefinite"/>
+  </use>
+</g>
+
+<!-- Center Orb for Phases 1 & 2 -->
+<circle cx="300" cy="455" r="35" fill="#fff" filter="url(#glow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0.9; 0; 0; 0; 0.9; 0; 0; 0" keyTimes="0; 0.15; 0.20; 0.25; 0.26; 0.40; 0.45; 0.50; 0.51; 1" dur="24s" repeatCount="indefinite"/>
+</circle>
+
+<!-- ================= PHASE 2: Top & Bottom Halves ================= -->
+<g fill="#f5d442" filter="url(#glow)">
+  <!-- Top Side Glow -->
+  <use href="#meditating-figure" clip-path="url(#top-half)" opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0.2; 0; 0" keyTimes="0; 0.25; 0.30; 0.37; 0.43; 0.47; 1" dur="24s" repeatCount="indefinite"/>
+  </use>
+  <!-- Bottom Side Glow -->
+  <use href="#meditating-figure" clip-path="url(#bottom-half)" opacity="0">
+    <animate attributeName="opacity" values="0; 0; 0; 1; 0.2; 0; 0" keyTimes="0; 0.25; 0.33; 0.37; 0.43; 0.47; 1" dur="24s" repeatCount="indefinite"/>
+  </use>
+</g>
+
+<!-- ================= PHASE 3: Whole Body Flow ================= -->
+<use href="#meditating-figure" fill="#E1F5FE" filter="url(#glow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0; 0.7; 0.3; 0.7; 0; 0" keyTimes="0; 0.50; 0.52; 0.60; 0.65; 0.70; 0.75; 1" dur="24s" repeatCount="indefinite"/>
+</use>
+
+<!-- ================= PHASE 4: Directing Up & Out the Crown ================= -->
+<!-- Body energy rising up -->
+<use href="#meditating-figure" fill="#ffffff" filter="url(#glow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0; 1; 0; 0" keyTimes="0; 0.75; 0.77; 0.82; 0.95; 1" dur="24s" repeatCount="indefinite"/>
+  <!-- Creating a rising masking effect using the top clip path vertically scaled -->
+  <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,0; 0,-50; 0,0" keyTimes="0; 0.75; 0.77; 0.82; 1" dur="24s" repeatCount="indefinite"/>
+</use>
+
+<!-- Crown Energy Beam -->
+<rect x="270" y="20" width="60" height="220" fill="url(#beamGrad)" filter="url(#glow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0; 0; 1; 0" keyTimes="0; 0.75; 0.80; 0.83; 0.88; 0.98" dur="24s" repeatCount="indefinite"/>
+</rect>
+
+<!-- Upward moving energy particles (dash array effect) -->
+<line x1="300" y1="240" x2="300" y2="40" stroke="#fff" stroke-width="25" stroke-dasharray="20 40" stroke-linecap="round" filter="url(#glow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0; 0; 0.8; 0" keyTimes="0; 0.75; 0.80; 0.83; 0.88; 0.98" dur="24s" repeatCount="indefinite"/>
+  <animate attributeName="stroke-dashoffset" values="180; 180; 180; 0" keyTimes="0; 0.75; 0.82; 0.98" dur="24s" repeatCount="indefinite"/>
+</line>
+
+<!-- ================= TEXTS & LABELS ================= -->
+<text x="340" y="70" font-family="sans-serif" font-size="22" font-weight="bold" fill="#F0F0F0" text-anchor="middle">Meditation: Directing Energy</text>
+
+<!-- Phase 1 Text (0 - 25%) -->
+<text x="340" y="105" font-family="sans-serif" font-size="14" fill="#42e3f5" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 1: Balancing Left and Right to the Center of the torso</tspan>
+  <animate attributeName="opacity" values="1; 1; 0; 0; 0" keyTimes="0; 0.23; 0.25; 0.98; 1" dur="24s" repeatCount="indefinite" />
+</text>
+
+<!-- Phase 2 Text (25% - 50%) -->
+<text x="340" y="105" font-family="sans-serif" font-size="14" fill="#f5d442" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 2: Balancing Top and Bottom halves to the Center</tspan>
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.24; 0.26; 0.48; 0.50; 1" dur="24s" repeatCount="indefinite" />
+</text>
+
+<!-- Phase 3 Text (50% - 75%) -->
+<text x="340" y="105" font-family="sans-serif" font-size="14" fill="#E1F5FE" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 3: Feeling the whole body & expanding the Aura</tspan>
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.49; 0.51; 0.73; 0.75; 1" dur="24s" repeatCount="indefinite" />
+</text>
+
+<!-- Phase 4 Text (75% - 100%) -->
+<text x="340" y="105" font-family="sans-serif" font-size="14" fill="#F2E230" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 4: Directing energy UPWARDS and OUT the Crown Chakra</tspan>
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.74; 0.76; 0.98; 1" dur="24s" repeatCount="indefinite" />
+</text>
+
+<!-- Instructional notes on the sides -->
+<text x="50" y="400" font-family="sans-serif" font-size="12" fill="#888" width="150" opacity="0.6">
+  <tspan x="50" dy="0">"Wherever the mind</tspan>
+  <tspan x="50" dy="18">is focused with intent,</tspan>
+  <tspan x="50" dy="18">the energy will follow."</tspan>
+</text>
+
+<text x="480" y="400" font-family="sans-serif" font-size="12" fill="#888" width="150" opacity="0.6">
+  <tspan x="480" dy="0">Do not let energy pool</tspan>
+  <tspan x="480" dy="18">in the legs. Always</tspan>
+  <tspan x="480" dy="18">push it out the crown.</tspan>
+</text>
+
+</svg>
+</body>
+</html>

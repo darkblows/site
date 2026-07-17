@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Closing the Chakras — Protection</title>
+</head>
+<body style="margin:0;padding:24px;background:#0d0d0d;display:flex;justify-content:center;font-family:sans-serif;">
+
+<svg width="680" height="780" viewBox="0 0 680 780" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Meditating figure closing chakras with shutters for isolation and peaceful energy</title>
+<desc>A 12-second looping animation where seven spinning chakras are gradually covered by doors/shutters from bottom to top to block external energies. When all are closed, a peaceful blue-gray aura emerges, then they reopen from top to bottom.</desc>
+
+<defs>
+  <!-- Gradient for the inner peace aura -->
+  <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#4A7599" stop-opacity="0.35"/>
+    <stop offset="100%" stop-color="#4A7599" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Shadow to give a slight 3D effect to the shutters when closing over the chakra -->
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.9"/>
+  </filter>
+
+  <!-- Left Shutter Definition -->
+  <g id="left-door">
+    <!-- Base panel -->
+    <rect x="-23" y="-23" width="23" height="46" fill="#151518" stroke="#000" stroke-width="1" rx="2" />
+    <!-- Inner frame (Bevel) -->
+    <rect x="-22" y="-22" width="21" height="44" fill="none" stroke="#333" stroke-width="1" rx="1" />
+    
+    <!-- Shutter slats -->
+    <line x1="-19" y1="-14" x2="-4" y2="-14" stroke="#000" stroke-width="2" />
+    <line x1="-19" y1="-12.5" x2="-4" y2="-12.5" stroke="#444" stroke-width="1" />
+    
+    <line x1="-19" y1="-6" x2="-4" y2="-6" stroke="#000" stroke-width="2" />
+    <line x1="-19" y1="-4.5" x2="-4" y2="-4.5" stroke="#444" stroke-width="1" />
+    
+    <line x1="-19" y1="2" x2="-4" y2="2" stroke="#000" stroke-width="2" />
+    <line x1="-19" y1="3.5" x2="-4" y2="3.5" stroke="#444" stroke-width="1" />
+    
+    <line x1="-19" y1="10" x2="-4" y2="10" stroke="#000" stroke-width="2" />
+    <line x1="-19" y1="11.5" x2="-4" y2="11.5" stroke="#444" stroke-width="1" />
+    
+    <line x1="-19" y1="18" x2="-4" y2="18" stroke="#000" stroke-width="2" />
+    <line x1="-19" y1="19.5" x2="-4" y2="19.5" stroke="#444" stroke-width="1" />
+  </g>
+
+  <!-- Right Shutter Definition -->
+  <g id="right-door">
+    <!-- Base panel -->
+    <rect x="0" y="-23" width="23" height="46" fill="#151518" stroke="#000" stroke-width="1" rx="2" />
+    <!-- Inner frame (Bevel) -->
+    <rect x="1" y="-22" width="21" height="44" fill="none" stroke="#333" stroke-width="1" rx="1" />
+    
+    <!-- Shutter slats -->
+    <line x1="4" y1="-14" x2="19" y2="-14" stroke="#000" stroke-width="2" />
+    <line x1="4" y1="-12.5" x2="19" y2="-12.5" stroke="#444" stroke-width="1" />
+    
+    <line x1="4" y1="-6" x2="19" y2="-6" stroke="#000" stroke-width="2" />
+    <line x1="4" y1="-4.5" x2="19" y2="-4.5" stroke="#444" stroke-width="1" />
+    
+    <line x1="4" y1="2" x2="19" y2="2" stroke="#000" stroke-width="2" />
+    <line x1="4" y1="3.5" x2="19" y2="3.5" stroke="#444" stroke-width="1" />
+    
+    <line x1="4" y1="10" x2="19" y2="10" stroke="#000" stroke-width="2" />
+    <line x1="4" y1="11.5" x2="19" y2="11.5" stroke="#444" stroke-width="1" />
+    
+    <line x1="4" y1="18" x2="19" y2="18" stroke="#000" stroke-width="2" />
+    <line x1="4" y1="19.5" x2="19" y2="19.5" stroke="#444" stroke-width="1" />
+  </g>
+</defs>
+
+<!-- Peace aura (visible only when chakras are closed) -->
+<!-- Centered closer to the middle of the new positions (y=410) -->
+<circle cx="300" cy="410" r="320" fill="url(#auraGrad)">
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.45; 0.50; 0.65; 0.70; 1" dur="12s" repeatCount="indefinite" />
+</circle>
+
+<!-- Status texts -->
+<text x="320" y="80" font-family="sans-serif" font-size="20" font-weight="bold" fill="#F0F0F0" text-anchor="middle">Meditation: Closing the Chakras</text>
+<text x="320" y="110" font-family="sans-serif" font-size="14" fill="#999" text-anchor="middle">
+  <tspan>Phase: Progressively blocking external energies...</tspan>
+  <animate attributeName="opacity" values="1; 1; 0; 0; 1; 1" keyTimes="0; 0.40; 0.45; 0.70; 0.75; 1" dur="12s" repeatCount="indefinite" />
+</text>
+<text x="320" y="110" font-family="sans-serif" font-size="14" fill="#6A9EAD" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase: Sense of calm and inner peace</tspan>
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.40; 0.45; 0.70; 0.75; 1" dur="12s" repeatCount="indefinite" />
+</text>
+
+<!-- Meditating Figure Silhouette -->
+<ellipse cx="300" cy="720" rx="115" ry="13" fill="#888780" opacity="0.15"/>
+<path d="M215 700 Q205 660 220 630 Q235 615 260 615 L260 640 Q245 655 245 680 Q245 700 260 705 Z" fill="#5F5E5A" opacity="0.4" stroke="#444441" stroke-width="1"/>
+<path d="M385 700 Q395 660 380 630 Q365 615 340 615 L340 640 Q355 655 355 680 Q355 700 340 705 Z" fill="#5F5E5A" opacity="0.4" stroke="#444441" stroke-width="1"/>
+<path d="M225 615 Q210 560 225 520 Q235 495 260 480 L260 500 Q245 515 240 540 Q235 570 245 605 Q250 615 260 618 Z" fill="#5F5E5A" opacity="0.38" stroke="#444441" stroke-width="1"/>
+<path d="M375 615 Q390 560 375 520 Q365 495 340 480 L340 500 Q355 515 360 540 Q365 570 355 605 Q350 615 340 618 Z" fill="#5F5E5A" opacity="0.38" stroke="#444441" stroke-width="1"/>
+<path d="M245 630 Q225 590 235 550 L250 500 Q235 480 238 460 Q255 452 300 450 Q345 452 362 460 Q365 480 350 500 L365 550 Q375 590 355 630 Q300 650 245 630 Z" fill="#6B6A65" opacity="0.4" stroke="#444441" stroke-width="1"/>
+<path d="M258 460 Q248 400 262 355 Q275 330 300 322 Q325 330 338 355 Q352 400 342 460 Q321 470 300 471 Q279 470 258 460 Z" fill="#888780" opacity="0.32" stroke="#5F5E5A" stroke-width="1"/>
+<circle cx="300" cy="278" r="42" fill="#B4B2A9" opacity="0.4" stroke="#5F5E5A" stroke-width="1"/>
+<path d="M262 265 Q262 224 300 218 Q338 224 338 265 Q338 238 300 232 Q262 238 262 265 Z" fill="#2C2C2A" opacity="0.55"/>
+<ellipse cx="286" cy="280" rx="3" ry="4" fill="#2C2C2A" opacity="0.4"/>
+<ellipse cx="314" cy="280" rx="3" ry="4" fill="#2C2C2A" opacity="0.4"/>
+<path d="M292 300 Q300 305 308 300" stroke="#5F5E5A" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+<path d="M270 246 Q286 240 298 244" stroke="#2C2C2A" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+<path d="M330 246 Q314 240 302 244" stroke="#2C2C2A" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+
+
+<!-- ================= CHAKRAS WITH ANIMATED SHUTTERS ================= -->
+
+<!-- 1st ROOT (Updated Y=605) -->
+<g transform="translate(300,605)">
+  <polygon points="0,-22 19,11 -19,11" fill="#E24B4A" stroke="#791F1F" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="-25,0; -25,0; 0,0; 0,0; -25,0; -25,0" keyTimes="0; 0.10; 0.15; 0.82; 0.87; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#left-door" filter="url(#shadow)" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="25,0; 25,0; 0,0; 0,0; 25,0; 25,0" keyTimes="0; 0.10; 0.15; 0.82; 0.87; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#right-door" filter="url(#shadow)" />
+  </g>
+</g>
+<text x="430" y="610" font-size="12" fill="#cccccc">1st Root — blocking light &amp; energies</text>
+<line x1="355" y1="605" x2="420" y2="610" stroke="#666" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<!-- 2nd SACRAL (Updated Y=545) -->
+<g transform="translate(300,545)">
+  <polygon points="0,-22 19,11 -19,11" fill="#F0997B" stroke="#712B13" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="-25,0; -25,0; 0,0; 0,0; -25,0; -25,0" keyTimes="0; 0.15; 0.20; 0.80; 0.85; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#left-door" filter="url(#shadow)" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="25,0; 25,0; 0,0; 0,0; 25,0; 25,0" keyTimes="0; 0.15; 0.20; 0.80; 0.85; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#right-door" filter="url(#shadow)" />
+  </g>
+</g>
+<text x="430" y="550" font-size="12" fill="#cccccc">2nd Sacral — repelling unwanted energy</text>
+<line x1="355" y1="545" x2="420" y2="550" stroke="#666" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<!-- 3rd SOLAR PLEXUS (Updated Y=455) -->
+<g transform="translate(300,455)">
+  <polygon points="0,22 19,-11 -19,-11" fill="#F2A623" stroke="#633806" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="-25,0; -25,0; 0,0; 0,0; -25,0; -25,0" keyTimes="0; 0.20; 0.25; 0.78; 0.83; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#left-door" filter="url(#shadow)" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="25,0; 25,0; 0,0; 0,0; 25,0; 25,0" keyTimes="0; 0.20; 0.25; 0.78; 0.83; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#right-door" filter="url(#shadow)" />
+  </g>
+</g>
+<text x="430" y="460" font-size="12" fill="#cccccc">3rd Solar Plexus — psychic defense</text>
+<line x1="355" y1="455" x2="420" y2="460" stroke="#666" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<!-- 4th HEART (Updated Y=375) -->
+<g transform="translate(300,375)">
+  <polygon points="0,-20 18,0 0,20 -18,0" fill="#5DCAA5" stroke="#085041" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="-25,0; -25,0; 0,0; 0,0; -25,0; -25,0" keyTimes="0; 0.25; 0.30; 0.76; 0.81; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#left-door" filter="url(#shadow)" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="25,0; 25,0; 0,0; 0,0; 25,0; 25,0" keyTimes="0; 0.25; 0.30; 0.76; 0.81; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#right-door" filter="url(#shadow)" />
+  </g>
+</g>
+<text x="430" y="380" font-size="12" fill="#cccccc">4th Heart — calm and inner peace</text>
+<line x1="355" y1="375" x2="420" y2="380" stroke="#666" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<!-- 5th THROAT (Updated Y=315) -->
+<g transform="translate(300,315)">
+  <polygon points="0,20 17,-10 -17,-10" fill="#378ADD" stroke="#042C53" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="-25,0; -25,0; 0,0; 0,0; -25,0; -25,0" keyTimes="0; 0.30; 0.35; 0.74; 0.79; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#left-door" filter="url(#shadow)" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="25,0; 25,0; 0,0; 0,0; 25,0; 25,0" keyTimes="0; 0.30; 0.35; 0.74; 0.79; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#right-door" filter="url(#shadow)" />
+  </g>
+</g>
+<text x="430" y="320" font-size="12" fill="#cccccc">5th Throat — blocking external disturbances</text>
+<line x1="355" y1="315" x2="420" y2="320" stroke="#666" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<!-- 6th THIRD EYE (Updated Y=255) -->
+<g transform="translate(300,255)">
+  <polygon points="0,17 15,-9 -15,-9" fill="#7F77DD" stroke="#26215C" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="-25,0; -25,0; 0,0; 0,0; -25,0; -25,0" keyTimes="0; 0.35; 0.40; 0.72; 0.77; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#left-door" filter="url(#shadow)" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="25,0; 25,0; 0,0; 0,0; 25,0; 25,0" keyTimes="0; 0.35; 0.40; 0.72; 0.77; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#right-door" filter="url(#shadow)" />
+  </g>
+</g>
+<text x="430" y="260" font-size="12" fill="#cccccc">6th Third Eye — excluding outer stimuli</text>
+<line x1="355" y1="255" x2="420" y2="260" stroke="#666" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<!-- 7th CROWN (Updated Y=215) -->
+<g transform="translate(300,215)">
+  <polygon points="0,15 13,-8 -13,-8" fill="#D4537E" stroke="#4B1528" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="-25,0; -25,0; 0,0; 0,0; -25,0; -25,0" keyTimes="0; 0.40; 0.45; 0.70; 0.75; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#left-door" filter="url(#shadow)" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="25,0; 25,0; 0,0; 0,0; 25,0; 25,0" keyTimes="0; 0.40; 0.45; 0.70; 0.75; 1" dur="12s" repeatCount="indefinite"/>
+    <use href="#right-door" filter="url(#shadow)" />
+  </g>
+</g>
+<text x="430" y="220" font-size="12" fill="#cccccc">7th Crown — astral isolation &amp; protection</text>
+<line x1="355" y1="215" x2="420" y2="220" stroke="#666" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+</svg>
+</body>
+</html>

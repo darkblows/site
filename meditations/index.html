@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Portal</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolygon points='12,4 20,16 4,16'/%3E%3Ccircle cx='12' cy='12' r='2.5' fill='%23d4af37'/%3E%3C/svg%3E">
+    
+    <style>
+      :root {
+        --bg-dark: #07070a;
+        --accent-gold: #d4af37;
+        --accent-gold-glow: rgba(212, 175, 55, 0.4);
+        --cyan-mystic: #00e5ff;
+        --cyan-mystic-glow: rgba(0, 229, 255, 0.4);
+        --purple-mystic: #9c27b0;
+        --purple-mystic-glow: rgba(156, 39, 176, 0.4);
+        --ruby-fire: #ff1744;
+        --ruby-fire-glow: rgba(255, 23, 68, 0.4);
+        --text-light: #e0e0e0;
+        --text-dim: #9e9ea0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-light);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: 
+          radial-gradient(circle at 20% 30%, rgba(20, 10, 45, 0.6) 0%, transparent 40%),
+          radial-gradient(circle at 80% 70%, rgba(10, 35, 45, 0.5) 0%, transparent 40%);
+        z-index: -2;
+        pointer-events: none;
+      }
+
+      .bg-geometry {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 600px;
+        opacity: 0.03;
+        z-index: -1;
+        pointer-events: none;
+        animation: slowRotate 120s linear infinite;
+      }
+
+      @keyframes slowRotate {
+        from { transform: translate(-50%, -50%) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(360deg); }
+      }
+
+      header {
+        text-align: center;
+        padding: 60px 20px 40px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        background: linear-gradient(to bottom, rgba(7, 7, 10, 0.95), rgba(7, 7, 10, 0.8));
+      }
+
+      .header-symbol {
+        font-size: 2rem;
+        color: var(--accent-gold);
+        text-shadow: 0 0 10px var(--accent-gold-glow);
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+        font-size: 2.8rem;
+        font-weight: 800;
+        letter-spacing: 4px;
+        color: #ffffff;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      .intro-text {
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1rem;
+        color: var(--text-dim);
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+
+      main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .portal-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 40px;
+        align-items: start;
+      }
+
+      .stage-column {
+        background: rgba(13, 13, 20, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 30px 20px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.4s ease, border-color 0.4s ease;
+      }
+
+      .stage-column.beginning {
+        border-top: 4px solid var(--cyan-mystic);
+      }
+      .stage-column.beginning:hover {
+        border-color: var(--cyan-mystic);
+        box-shadow: 0 10px 30px rgba(0, 229, 255, 0.05);
+        transform: translateY(-5px);
+      }
+
+      .stage-column.intermediate {
+        border-top: 4px solid var(--purple-mystic);
+      }
+      .stage-column.intermediate:hover {
+        border-color: var(--purple-mystic);
+        box-shadow: 0 10px 30px rgba(156, 39, 176, 0.05);
+        transform: translateY(-5px);
+      }
+
+      .stage-column.advanced {
+        border-top: 4px solid var(--ruby-fire);
+      }
+      .stage-column.advanced:hover {
+        border-color: var(--ruby-fire);
+        box-shadow: 0 10px 30px rgba(255, 23, 68, 0.05);
+        transform: translateY(-5px);
+      }
+
+      .stage-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .stage-title-esoteric {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+        color: var(--accent-gold);
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+
+      .stage-title {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: 2px;
+      }
+
+      .stage-desc {
+        font-size: 0.85rem;
+        color: var(--text-dim);
+        margin-top: 8px;
+        font-style: italic;
+      }
+
+      .meditations-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .meditation-item {
+        position: relative;
+      }
+
+      .meditation-link {
+        display: block;
+        padding: 16px 20px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--text-light);
+        transition: all 0.3s ease;
+      }
+
+      .meditation-link::before {
+        content: '🜁';
+        display: inline-block;
+        margin-right: 10px;
+        color: var(--accent-gold);
+        font-size: 0.9rem;
+        transition: transform 0.3s ease;
+      }
+
+      .beginning .meditation-link:hover {
+        background: rgba(0, 229, 255, 0.04);
+        border-color: rgba(0, 229, 255, 0.3);
+        box-shadow: 0 0 10px rgba(0, 229, 255, 0.1);
+        transform: translateX(5px);
+      }
+      .beginning .meditation-link:hover::before {
+        color: var(--cyan-mystic);
+        transform: rotate(180deg);
+      }
+
+      .intermediate .meditation-link:hover {
+        background: rgba(156, 39, 176, 0.04);
+        border-color: rgba(156, 39, 176, 0.3);
+        box-shadow: 0 0 10px rgba(156, 39, 176, 0.1);
+        transform: translateX(5px);
+      }
+      .intermediate .meditation-link:hover::before {
+        color: var(--purple-mystic);
+        transform: rotate(180deg);
+      }
+
+      .advanced .meditation-link:hover {
+        background: rgba(255, 23, 68, 0.04);
+        border-color: rgba(255, 23, 68, 0.3);
+        box-shadow: 0 0 10px rgba(255, 23, 68, 0.1);
+        transform: translateX(5px);
+      }
+      .advanced .meditation-link:hover::before {
+        color: var(--ruby-fire);
+        transform: rotate(180deg);
+      }
+
+      .meditation-title {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        display: block;
+        margin-bottom: 4px;
+        color: #ffffff;
+      }
+
+      .meditation-desc {
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        display: block;
+        font-weight: 300;
+      }
+
+      footer {
+        text-align: center;
+        padding: 50px 20px;
+        margin-top: 60px;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        letter-spacing: 2px;
+      }
+
+      .footer-credits {
+        text-transform: none;
+        font-weight: 400;
+        margin-top: 10px;
+        font-size: 0.85rem;
+        color: var(--accent-gold);
+        text-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+        letter-spacing: 1px;
+      }
+
+      .footer-symbol {
+        font-size: 1.2rem;
+        color: var(--accent-gold);
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 900px) {
+        .portal-grid {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <svg class="bg-geometry" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="#d4af37" stroke-width="0.3"/>
+      <circle cx="50" cy="50" r="35" fill="none" stroke="#d4af37" stroke-width="0.2"/>
+      <polygon points="50,5 90,75 10,75" fill="none" stroke="#d4af37" stroke-width="0.2"/>
+      <polygon points="50,95 90,25 10,25" fill="none" stroke="#d4af37" stroke-width="0.2"/>
+      <circle cx="50" cy="50" r="10" fill="none" stroke="#d4af37" stroke-width="0.1"/>
+    </svg>
+
+    <header>
+      <div class="header-symbol">🜍</div>
+      <h1>The Esoteric Meditation Portal</h1>
+      <p class="intro-text">
+        An interactive guide to subtle energy manipulation, chakra alignment, and somatic alignment.
+      </p>
+    </header>
+
+    <main>
+      <div class="portal-grid">
+        
+        <!-- ================= LEVEL 1 (Beginning) ================= -->
+        <section class="stage-column beginning">
+          <div class="stage-header">
+            <div class="stage-title-esoteric">Grade I</div>
+            <h2 class="stage-title">Level 1</h2>
+            <p class="stage-desc">Foundations of the Vessel & Breath Calibration</p>
+          </div>
+          
+          <ul class="meditations-list">
+            <li class="meditation-item">
+              <a href="beginning/the_breath.html" class="meditation-link">
+                <span class="meditation-title">The Breath</span>
+                <span class="meditation-desc">Master energy absorption like a sponge and talisman charging.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="beginning/go_trance.html" class="meditation-link">
+                <span class="meditation-title">Deep Trance Induction</span>
+                <span class="meditation-desc">Brainwave shift, Beta silencing, and slow mental descent.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="beginning/candle_flame.html" class="meditation-link">
+                <span class="meditation-title">Candle Flame Concentration</span>
+                <span class="meditation-desc">Develop one-pointed concentration via physical afterimage.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="beginning/energy_meditation.html" class="meditation-link">
+                <span class="meditation-title">Energy Expansion</span>
+                <span class="meditation-desc">Absorb cosmic rays and learn to flex and expand your aura.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="beginning/energy_direct.html" class="meditation-link">
+                <span class="meditation-title">Directing Energy</span>
+                <span class="meditation-desc">Learn directional pathways, balance body halves, and clear pools.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="beginning/ez_chakra_spin_svgtest.html" class="meditation-link">
+                <span class="meditation-title">EZ Chakra Spin</span>
+                <span class="meditation-desc">An introduction to basic spinal vortex alignment and rotation.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="beginning/aura_cleansing.html" class="meditation-link">
+                <span class="meditation-title">Aura Cleansing</span>
+                <span class="meditation-desc">Spiritual hygiene template to clear grey negative buildup.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="beginning/aura_protection.html" class="meditation-link">
+                <span class="meditation-title">Aura of Protection</span>
+                <span class="meditation-desc">Construct a defensive egg-shield of reflective white-gold light.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="beginning/closing_chakras.html" class="meditation-link">
+                <span class="meditation-title">Closing the Chakras</span>
+                <span class="meditation-desc">Progressively block external energies with defensive shutters.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="beginning/returning_curses.html" class="meditation-link">
+                <span class="meditation-title">Returning Curses</span>
+                <span class="meditation-desc">Transmute dark nodes with a giant sun sweep and deflect attacks.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ================= LEVEL 2 (Intermediate) ================= -->
+        <section class="stage-column intermediate">
+          <div class="stage-header">
+            <div class="stage-title-esoteric">Grade II</div>
+            <h2 class="stage-title">Level 2</h2>
+            <p class="stage-desc">Polarity Circulation & Subtle Body Separation</p>
+          </div>
+          
+          <ul class="meditations-list">
+            <li class="meditation-item">
+              <a href="intermediate/pineal_activation.html" class="meditation-link">
+                <span class="meditation-title">Pineal Activation</span>
+                <span class="meditation-desc">Safely stimulate and wake up the psychic mid-brain core.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="intermediate/zeus_meditation.html" class="meditation-link">
+                <span class="meditation-title">Meditation of Zeus</span>
+                <span class="meditation-desc">Flood prefrontal and crown networks with electric lightning.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="intermediate/circulating_energy.html" class="meditation-link">
+                <span class="meditation-title">The Microcosmic Orbit</span>
+                <span class="meditation-desc">Circulate cooling Ren Mai and warming Du Mai energies.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="intermediate/single_serpent.html" class="meditation-link">
+                <span class="meditation-title">Single Serpent Meditation</span>
+                <span class="meditation-desc">Ascend Ida and Pingala currents to project outward.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="intermediate/blue_meditation.html" class="meditation-link">
+                <span class="meditation-title">Blue Light Portal</span>
+                <span class="meditation-desc">Transcend into starry weightlessness via spiritual blue light.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="intermediate/aura_empower.html" class="meditation-link">
+                <span class="meditation-title">Aura Empowerment Circuit</span>
+                <span class="meditation-desc">Charge minor joint nodes and palms to trigger somatic healing.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="intermediate/astral_project1.html" class="meditation-link">
+                <span class="meditation-title">Astral Projection: Lock Release</span>
+                <span class="meditation-desc">Slightly unscrew and reverse the 7 chakra valve anchors.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="intermediate/astral_project2.html" class="meditation-link">
+                <span class="meditation-title">Astral Projection: Limbs</span>
+                <span class="meditation-desc">Practice deliberate phantom double arm and leg delamination.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="intermediate/ascending_energy.html" class="meditation-link">
+                <span class="meditation-title">Ascending Energy</span>
+                <span class="meditation-desc">Complex double-helix spinal ascent, dual-rotating 8th chakra rings, and toroidal flow.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="intermediate/double_serpent.html" class="meditation-link">
+                <span class="meditation-title">Twin Serpent Meditation</span>
+                <span class="meditation-desc">Rise of dual currents crossing at each chakra with a high-frequency spinning sushumna staff.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ================= LEVEL 3 (Advanced) ================= -->
+        <section class="stage-column advanced">
+          <div class="stage-header">
+            <div class="stage-title-esoteric">Grade III</div>
+            <h2 class="stage-title">Level 3</h2>
+            <p class="stage-desc">High-Frequency Transmutation & Soul Division</p>
+          </div>
+          
+          <ul class="meditations-list">
+            <li class="meditation-item">
+              <a href="advanced/past_life.html" class="meditation-link">
+                <span class="meditation-title">Past Life Regression</span>
+                <span class="meditation-desc">Descend the hypnotic memory tunnel to cross the chronological gate.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/elemental_concentrate.html" class="meditation-link">
+                <span class="meditation-title">Elemental Concentration</span>
+                <span class="meditation-desc">Condense Fire in Root & Water in Sacral with heart safeguards.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/advanced_chakra_rotating.html" class="meditation-link">
+                <span class="meditation-title">Advanced Chakra Rotation</span>
+                <span class="meditation-desc">Spin the centers at the Speed of Light to invoke a solar shield.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/pineal_breath.html" class="meditation-link">
+                <span class="meditation-title">Third Eye & Pineal Breath</span>
+                <span class="meditation-desc">Accumulate spinal pressure and release into a blissful golden flood.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/splitting_soul.html" class="meditation-link">
+                <span class="meditation-title">Soul Division</span>
+                <span class="meditation-desc">Isolate and align your Aura, Body of Light, and Mental Body.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/evoking_element.html" class="meditation-link">
+                <span class="meditation-title">Elemental Evocation</span>
+                <span class="meditation-desc">Evoke, condense, and dissolve the 4 raw elements in an external sphere.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/rotating_element.html" class="meditation-link">
+                <span class="meditation-title">Elemental Circulation</span>
+                <span class="meditation-desc">Circulate the Fire element along the path of the caduceus.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/circulating_element.html" class="meditation-link">
+                <span class="meditation-title">Alchemical Circulation</span>
+                <span class="meditation-desc">Symmetrical cycle of 11 alchemical phases with steam vapor and geometric elemental symbols.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/healing.html" class="meditation-link">
+                <span class="meditation-title">Psychic Healing</span>
+                <span class="meditation-desc">Expel localized toxic sludge and infuse organs with Solar Qi.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/detach_person_ofaura.html" class="meditation-link">
+                <span class="meditation-title">Cord Cutting Cleansing</span>
+                <span class="meditation-desc">UV diagnostic, sever negative ties via TH, and seal with solar shields.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/expanding_sushumna.html" class="meditation-link">
+                <span class="meditation-title">Sushumna Expansion</span>
+                <span class="meditation-desc">Expand the central spine column to radiate a massive thermal field.</span>
+              </a>
+            </li>
+            <li class="meditation-item">
+              <a href="advanced/spirit_meditation.html" class="meditation-link">
+                <span class="meditation-title">Spirit & Elements</span>
+                <span class="meditation-desc">Unify intellect (air), will (fire), feelings (water), and mind (earth).</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-symbol">🜔</div>
+      <p>As above, so below — Inside the micro-cosmos, the soul rises.</p>
+      <div class="footer-credits">Created by zdarkblow</div>
+    </footer>
+
+  </body>
+</html>

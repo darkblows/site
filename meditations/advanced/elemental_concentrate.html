@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADu0lEQVR42q1Ta09UVxSdmv6DNk36C2o/YRtqo31ZwNoHbSkJjU3TNJZPTRttYlPTxoiJ9gEaFDUF5srUuVNmNAqMyCg+MmgwMANEghiMMuCAZCAg3sfcx1xey33OZR4YGY2Zk6zMPnuvs9acffdxPOsCsAY9UinC0lcsduR6ISy3YCjux+14M8XNOTeo6MCL2h3joXlXV1icc4OPG63WEl8CXxI+oTin4h+J8VcKPRa2nUpwsJjlcmbwzzktj4n2dajoJbCY5XJmMD9s/l52ykKZz8bXFM8PG7ueY1LUlwC8kJlje4wYo9d6TBQ3WfjstIVOiikXSXEz+X3qy9lGsZIwgLBUksoNGxtIDEuEHWM6dkxoTNzGqLE+fVbZgpAcpvPCqgZEOEgELCNIRnmLUaMqNmRACCZQFjRR1mHymHLMpBK96mvEa8s415DFQNmTQcSVK9pCqc9aZB+VYXOjjqL/TST3JV5jodavzDFuGkr16gY9yvZM8jcn+UimcGj4IA5HqlbkCo7LeMygIouBVJokWiEZRSTwoZg2+S3kx66epuSe1951KkiEpLRBSPludYM+dW2SON6pcJH8Opn9Pgm8tkFQMXI1w6A7/vpKUTG2G+LkCMeB0VlclxYYsTeocpH3G5SU4OV+AZduHLf/vdtEkUvGRpeGtvPL4l3SEqpGddJ6aGNqnwOemVdpoxKAmijQMsXJrRc1LrQ/oIEeGY+7B4+g99YhFHiobQ0y/qbae/8ZONys2AbnpoHqe2Ba3MAbs98EbXbypHMCOBblZCGgc9FAV4KPZWZr3mnQsKdVRRvVNtFNfvEtt6h+DKi7bxt4Jn9Mt6kCayh5lQBqE9TADLafscdxsN9EMGzHQvt+ONv/wnqnikBnnGp2/lOXBLl9BqgcSYqff/yV81YtilPjra5ZlLoNfvBbGlNrSMfFkC0UCeVhLLwWbwsqWq6pVNOIY99iS72EA3XTII0Ib01yUT9/psMxGsm9X4iJCMXYSge8ZKR2KcDNOP68YLfo88YZBt73H07KvKZ2K/CemMXWEwbPb3QqUwVucy/TLBQTPzk2N86to80EYalcNHSfR8KA+ADXj03irHsW+/xGqvcVNYP44+gQjzeR2O4mDX4PcY/EMOB+AK8oYZvH0JgW02Ta/BaF4lw5JQwCsmH816OY3lmdlUOPb+HNWnn+LUGpSbWJCjcJeBrKnRMMT+Xl18t4o1ZSVn6H7DfQi0Uz+r1L72coFhNRlnsS9wPRtNb9K83lC3K9w+FwPAIIUIRh19D9kQAAAABJRU5ErkJggg==" />
+<meta charset="UTF-8">
+<title>Elemental Concentration — Fire &amp; Water Meditation</title>
+</head>
+<body style="margin:0;padding:24px;background:#0d0d0d;display:flex;justify-content:center;font-family:sans-serif;">
+
+<svg width="720" height="940" viewBox="0 0 720 940" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Elemental Concentration — Fire in Root &amp; Water in Sacral with Heart/Brain Safeguards</title>
+<desc>A 24-second visual loop. Left: Red-gold Fire element concentrating in Root chakra. Right: Indigo-blue Water element concentrating in Sacral chakra. Center: Protective blue cooling shields around the heart and brain.</desc>
+
+<defs>
+  <!-- Glow Filters -->
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="5" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  
+  <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="12" result="blur" />
+    <feComponentTransfer in="blur" result="glow">
+      <feFuncA type="linear" slope="1.5"/>
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Elemental Gradients -->
+  <!-- Fire (Root Target) -->
+  <radialGradient id="fireTarget" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+    <stop offset="30%" stop-color="#FF1744" stop-opacity="0.8"/>
+    <stop offset="70%" stop-color="#FF9100" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Water (Sacral Target) -->
+  <radialGradient id="waterTarget" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+    <stop offset="35%" stop-color="#00E5FF" stop-opacity="0.8"/>
+    <stop offset="75%" stop-color="#2979FF" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Reusable Base Figure (Dark Silhouette with exact face details) -->
+  <g id="meditating-figure">
+    <ellipse cx="300" cy="720" rx="115" ry="13" fill="#888780" opacity="0.15"/>
+    <path d="M215 700 Q205 660 220 630 Q235 615 260 615 L260 640 Q245 655 245 680 Q245 700 260 705 Z" fill="#5F5E5A" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M385 700 Q395 660 380 630 Q365 615 340 615 L340 640 Q355 655 355 680 Q355 700 340 705 Z" fill="#5F5E5A" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M225 615 Q210 560 225 520 Q235 495 260 480 L260 500 Q245 515 240 540 Q235 570 245 605 Q250 615 260 618 Z" fill="#5F5E5A" opacity="0.38" stroke="#444441" stroke-width="1"/>
+    <path d="M375 615 Q390 560 375 520 Q365 495 340 480 L340 500 Q355 515 360 540 Q365 570 355 605 Q350 615 340 618 Z" fill="#5F5E5A" opacity="0.38" stroke="#444441" stroke-width="1"/>
+    <path d="M245 630 Q225 590 235 550 L250 500 Q235 480 238 460 Q255 452 300 450 Q345 452 362 460 Q365 480 350 500 L365 550 Q375 590 355 630 Q300 650 245 630 Z" fill="#6B6A65" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M258 460 Q248 400 262 355 Q275 330 300 322 Q325 330 338 355 Q352 400 342 460 Q321 470 300 471 Q279 470 258 460 Z" fill="#888780" opacity="0.32" stroke="#5F5E5A" stroke-width="1"/>
+    <circle cx="300" cy="278" r="42" fill="#B4B2A9" opacity="0.4" stroke="#5F5E5A" stroke-width="1"/>
+    <path d="M262 265 Q262 224 300 218 Q338 224 338 265 Q338 238 300 232 Q262 238 262 265 Z" fill="#2C2C2A" opacity="0.55"/>
+    <ellipse cx="286" cy="280" rx="3" ry="4" fill="#2C2C2A" opacity="0.4"/>
+    <ellipse cx="314" cy="280" rx="3" ry="4" fill="#2C2C2A" opacity="0.4"/>
+    <path d="M292 300 Q300 305 308 300" stroke="#5F5E5A" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M270 246 Q286 240 298 244" stroke="#2C2C2A" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M330 246 Q314 240 302 244" stroke="#2C2C2A" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+  </g>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="720" height="940" fill="#0d0d0d"/>
+
+
+<!-- ================= SCENE: HIGH-FREQUENCY WARNING SAFEGUARDS ================= -->
+<!-- Cool blue shields around the Heart (375) and Brain (255-278) to indicate "NEVER DIRECT FIRE HERE" -->
+<g stroke="#00E5FF" stroke-width="2" fill="none" filter="url(#glow)">
+  <!-- Brain Shield -->
+  <circle cx="300" cy="265" r="55" stroke-dasharray="4 6" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0; 50" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M 300 195 A 15 15 0 0 1 300 225" stroke="#00E5FF" stroke-width="2.5" />
+  
+  <!-- Heart Shield -->
+  <circle cx="300" cy="375" r="45" stroke-dasharray="4 6" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0; -50" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+
+<!-- ================= THE MEDITATING FIGURE ================= -->
+<use href="#meditating-figure" />
+
+
+<!-- ================================================================= -->
+<!-- ============= THE CHAKRAS (Respecting Original Design) ============= -->
+<!-- ================================================================= -->
+<!-- Baseline spinning chakras -->
+<!-- 1st Root — Red (Y=605) - Progressively glows brighter across the 24s loop -->
+<g transform="translate(300,605)">
+  <!-- Accumulating Fire glow -->
+  <circle cx="0" cy="0" r="30" fill="url(#fireTarget)" filter="url(#heavyGlow)" opacity="0.1">
+    <animate attributeName="opacity" values="0.1; 0.9; 0.9" keyTimes="0; 0.80; 1" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <polygon points="0,-22 19,11 -19,11" fill="#E24B4A" stroke="#791F1F" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,-22 19,11 0,11" fill="#F7C1C1"><animate attributeName="opacity" values="0.1;0.65;0.1;0.1;0.1" dur="0.55s" repeatCount="indefinite"/></polygon>
+  <polygon points="0,-22 -19,11 0,11" fill="#FCEBEB"><animate attributeName="opacity" values="0.55;0.1;0.55;0.55;0.55" dur="0.55s" repeatCount="indefinite"/></polygon>
+</g>
+
+<!-- 2nd Sacral — Orange (Y=545) - Progressively glows brighter across the 24s loop -->
+<g transform="translate(300,545)">
+  <!-- Accumulating Water glow -->
+  <circle cx="0" cy="0" r="30" fill="url(#waterTarget)" filter="url(#heavyGlow)" opacity="0.1">
+    <animate attributeName="opacity" values="0.1; 0.9; 0.9" keyTimes="0; 0.80; 1" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <polygon points="0,-22 19,11 -19,11" fill="#F0997B" stroke="#712B13" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,-22 19,11 0,11" fill="#FAECE7"><animate attributeName="opacity" values="0.1;0.65;0.1;0.1;0.1" dur="0.55s" repeatCount="indefinite"/></polygon>
+  <polygon points="0,-22 -19,11 0,11" fill="#F5C4B3"><animate attributeName="opacity" values="0.55;0.1;0.55;0.55;0.55" dur="0.55s" repeatCount="indefinite"/></polygon>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- =================== SCENE: INFLOWING ELEMENTS =================== -->
+<!-- ================================================================= -->
+<!-- Left Side: Fire elements streaming down into Root (300, 605) -->
+<!-- Right Side: Water elements streaming down into Sacral (300, 545) -->
+<!-- Animated at 4.8s breath intervals (5 cycles in 24 seconds) -->
+<g fill="none" stroke-linecap="round" filter="url(#glow)">
+  <!-- Fire Stream (Left) -->
+  <path d="M 80 500 Q 120 620 270 605" stroke="#FF9100" stroke-width="3" stroke-dasharray="25 150" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" values="0; -175" dur="4.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9; 0.9; 0" keyTimes="0; 0.75; 1" dur="4.8s" repeatCount="indefinite" />
+  </path>
+  <path d="M 60 400 Q 100 580 270 605" stroke="#FF1744" stroke-width="2" stroke-dasharray="20 120" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" values="0; -140" dur="4.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9; 0.9; 0" keyTimes="0; 0.75; 1" dur="4.8s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Water Stream (Right) -->
+  <path d="M 640 420 Q 600 520 330 545" stroke="#00E5FF" stroke-width="3" stroke-dasharray="25 150" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" values="0; -175" dur="4.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9; 0.9; 0" keyTimes="0; 0.75; 1" dur="4.8s" repeatCount="indefinite" />
+  </path>
+  <path d="M 660 320 Q 620 480 330 545" stroke="#2979FF" stroke-width="2" stroke-dasharray="20 120" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" values="0; -140" dur="4.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9; 0.9; 0" keyTimes="0; 0.75; 1" dur="4.8s" repeatCount="indefinite" />
+  </path>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ================ LABELS & DOTTED POINTERS (Right) ================ -->
+<!-- ================================================================= -->
+<g stroke="#444" stroke-width="1" stroke-dasharray="3 3">
+  <!-- Brain Shield Line -->
+  <line x1="330" y1="210" x2="505" y2="215" />
+  <!-- Heart Shield Line -->
+  <line x1="335" y1="340" x2="505" y2="345" />
+  <!-- Sacral Target Line -->
+  <line x1="320" y1="545" x2="505" y2="550" />
+  <!-- Root Target Line -->
+  <line x1="320" y1="605" x2="505" y2="610" />
+</g>
+
+<!-- Labeled Texts -->
+<g font-family="sans-serif" font-size="11" fill="#cccccc" font-weight="bold">
+  <!-- Brain Safeguard Label -->
+  <text x="510" y="219" fill="#00E5FF" filter="url(#glow)">Brain Shield (Safeguarded)</text>
+  <text x="510" y="234" font-weight="normal" fill="#888">Never direct intense heat or fire here</text>
+
+  <!-- Heart Safeguard Label -->
+  <text x="510" y="349" fill="#00E5FF" filter="url(#glow)">Heart Shield (Safeguarded)</text>
+  <text x="510" y="364" font-weight="normal" fill="#888">Keep shielded from heavy fire vibrations</text>
+
+  <!-- Sacral Target Label -->
+  <text x="510" y="554" fill="#2979FF">Sacral Target (Water Focus)</text>
+  <text x="510" y="569" font-weight="normal" fill="#888">Cools abdomen; safe alternative focus</text>
+
+  <!-- Root Target Label -->
+  <text x="510" y="614" fill="#FF1744">Root Target (Fire Focus)</text>
+  <text x="510" y="629" font-weight="normal" fill="#888">Stimulates Kundalini; builds core heat</text>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ==================== MEDITATION GUIDE PANEL ===================== -->
+<!-- ================================================================= -->
+<g transform="translate(0, 0)">
+  <!-- Panel Glass Frame -->
+  <rect x="30" y="770" width="660" height="145" rx="14" fill="#111116" stroke="#2c2c35" stroke-width="1.5" />
+  
+  <!-- PHASE 1 TEXTS (0s - 6s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="1; 1; 0; 0; 0" keyTimes="0; 0.23; 0.25; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#00E5FF" text-anchor="middle" filter="url(#glow)">
+      PHASE 1: CALM THE MIND &amp; ELECT AN ELEMENT
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Calm your thoughts. Choose either Fire (directed to Root) or Water (directed to Sacral).
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFFFFF" font-weight="bold" text-anchor="middle">
+      "Settle your focus and prepare for the 5-breath condensation sequence."
+    </text>
+  </g>
+
+  <!-- PHASE 2 TEXTS (6s - 12s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.23; 0.25; 0.48; 0.50; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#FFF59D" text-anchor="middle" filter="url(#glow)">
+      PHASE 2: INHALE THE ELEMENT IN REPEATED PULSES
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Breathe in the elemental light (Fire on left, Water on right) from the surrounding universe.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFF59D" font-weight="bold" text-anchor="middle">
+      "Feel the raw frequency of the element filling your entire chest cavity."
+    </text>
+  </g>
+
+  <!-- PHASE 3 TEXTS (12s - 18s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.48; 0.50; 0.73; 0.75; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#FF1744" text-anchor="middle" filter="url(#glow)">
+      PHASE 3: EXHALE, DIRECT &amp; COMPRESS INTO BASE
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Exhale and push the element down. Condense it heavily into Root (Fire) or Sacral (Water).
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFFFFF" font-weight="bold" text-anchor="middle">
+      "Repeat for five breaths. Build pressure and feel the node hum with power."
+    </text>
+  </g>
+
+  <!-- PHASE 4 TEXTS (18s - 24s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.73; 0.75; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#AEEA00" text-anchor="middle" filter="url(#glow)">
+      PHASE 4: INTEGRATE BASE ENERGY &amp; PROTECT SENSITIVE ORGANS
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Let the breath return to normal. Bask in the warmth (Root) or fluid coldness (Sacral).
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#AEEA00" font-weight="bold" text-anchor="middle">
+      "Keep the Heart and Brain cool and safeguarded, shielding them from intense heat."
+    </text>
+  </g>
+</g>
+
+<!-- Side notes -->
+<text x="40" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="40" dy="0" fill="#FF1744" font-weight="bold">Core Warming:</tspan>
+  <tspan x="40" dy="18">The fire element at the</tspan>
+  <tspan x="40" dy="18">Root activates Kundalini;</tspan>
+  <tspan x="40" dy="18">keep it grounded at the base.</tspan>
+</text>
+
+<text x="480" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="480" dy="0" fill="#00E5FF" font-weight="bold">Somatic Comfort:</tspan>
+  <tspan x="480" dy="18">Water at the Sacral offers</tspan>
+  <tspan x="480" dy="18">a soothing, cool alternative</tspan>
+  <tspan x="480" dy="18">to release lower body tension.</tspan>
+</text>
+
+</svg>
+</body>
+</html>

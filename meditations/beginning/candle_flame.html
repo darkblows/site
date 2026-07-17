@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADu0lEQVR42q1Ta09UVxSdmv6DNk36C2o/YRtqo31ZwNoHbSkJjU3TNJZPTRttYlPTxoiJ9gEaFDUF5srUuVNmNAqMyCg+MmgwMANEghiMMuCAZCAg3sfcx1xey33OZR4YGY2Zk6zMPnuvs9acffdxPOsCsAY9UinC0lcsduR6ISy3YCjux+14M8XNOTeo6MCL2h3joXlXV1icc4OPG63WEl8CXxI+oTin4h+J8VcKPRa2nUpwsJjlcmbwzzktj4n2dajoJbCY5XJmMD9s/l52ykKZz8bXFM8PG7ueY1LUlwC8kJlje4wYo9d6TBQ3WfjstIVOiikXSXEz+X3qy9lGsZIwgLBUksoNGxtIDEuEHWM6dkxoTNzGqLE+fVbZgpAcpvPCqgZEOEgELCNIRnmLUaMqNmRACCZQFjRR1mHymHLMpBK96mvEa8s415DFQNmTQcSVK9pCqc9aZB+VYXOjjqL/TST3JV5jodavzDFuGkr16gY9yvZM8jcn+UimcGj4IA5HqlbkCo7LeMygIouBVJokWiEZRSTwoZg2+S3kx66epuSe1951KkiEpLRBSPludYM+dW2SON6pcJH8Opn9Pgm8tkFQMXI1w6A7/vpKUTG2G+LkCMeB0VlclxYYsTeocpH3G5SU4OV+AZduHLf/vdtEkUvGRpeGtvPL4l3SEqpGddJ6aGNqnwOemVdpoxKAmijQMsXJrRc1LrQ/oIEeGY+7B4+g99YhFHiobQ0y/qbae/8ZONys2AbnpoHqe2Ba3MAbs98EbXbypHMCOBblZCGgc9FAV4KPZWZr3mnQsKdVRRvVNtFNfvEtt6h+DKi7bxt4Jn9Mt6kCayh5lQBqE9TADLafscdxsN9EMGzHQvt+ONv/wnqnikBnnGp2/lOXBLl9BqgcSYqff/yV81YtilPjra5ZlLoNfvBbGlNrSMfFkC0UCeVhLLwWbwsqWq6pVNOIY99iS72EA3XTII0Ib01yUT9/psMxGsm9X4iJCMXYSge8ZKR2KcDNOP68YLfo88YZBt73H07KvKZ2K/CemMXWEwbPb3QqUwVucy/TLBQTPzk2N86to80EYalcNHSfR8KA+ADXj03irHsW+/xGqvcVNYP44+gQjzeR2O4mDX4PcY/EMOB+AK8oYZvH0JgW02Ta/BaF4lw5JQwCsmH816OY3lmdlUOPb+HNWnn+LUGpSbWJCjcJeBrKnRMMT+Xl18t4o1ZSVn6H7DfQi0Uz+r1L72coFhNRlnsS9wPRtNb9K83lC3K9w+FwPAIIUIRh19D9kQAAAABJRU5ErkJggg==" />
+<meta charset="UTF-8">
+<title>Candle Flame Concentration — Third Eye</title>
+</head>
+<body style="margin:0;padding:24px;background:#0d0d0d;display:flex;justify-content:center;font-family:sans-serif;">
+
+<svg width="680" height="780" viewBox="0 0 680 780" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>First-person POV animation of candle flame concentration and afterimage manipulation</title>
+<desc>A 24-second loop showing a candle flame. The view goes pitch black as hands cover the eyes. A glowing afterimage of the flame drifts in the darkness, gets pulled back to the center, shrinks, and changes color from white to pink, to red, to dark, training psychic focus.</desc>
+
+<defs>
+  <!-- Glow for the physical candle -->
+  <radialGradient id="candleGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#FFD54F" stop-opacity="0.6"/>
+    <stop offset="40%" stop-color="#FFB300" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#FF8F00" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Heavy Blur for the Afterimage (Imprint) -->
+  <filter id="afterimageBlur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="4" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Subtle glow for text -->
+  <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="2" result="blur" />
+    <feComponentTransfer in="blur" result="glow">
+      <feFuncA type="linear" slope="2"/>
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+
+<!-- ================= BACKGROUND ================= -->
+<rect width="680" height="780" fill="#080808"/>
+
+<!-- ================= SCENE 1: THE PHYSICAL CANDLE ================= -->
+<g id="real-candle" transform="translate(340, 420)">
+  <!-- Fade out when eyes close -->
+  <animate attributeName="opacity" values="1; 1; 0; 0; 0; 1" keyTimes="0; 0.24; 0.26; 0.95; 0.97; 1" dur="24s" repeatCount="indefinite"/>
+  
+  <!-- Candle Stick -->
+  <rect x="-15" y="45" width="30" height="200" fill="#E6E6E6" rx="3"/>
+  <!-- Wick -->
+  <line x1="0" y1="45" x2="0" y2="30" stroke="#444" stroke-width="3"/>
+  
+  <!-- Flame Group with continuous flickering -->
+  <g>
+    <animateTransform attributeName="transform" type="scale" values="1,1; 1.05,1.1; 0.95,0.9; 1,1.05; 1,1" dur="0.2s" repeatCount="indefinite"/>
+    
+    <!-- Outer Glow -->
+    <circle cx="0" cy="0" r="70" fill="url(#candleGlow)">
+      <animate attributeName="opacity" values="0.8; 1; 0.7; 0.9; 0.8" dur="0.3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Outer Orange Flame -->
+    <path d="M 0 -70 C 0 -70 -20 0 -20 20 C -20 35 -10 45 0 45 C 10 45 20 35 20 20 C 20 0 0 -70 0 -70 Z" fill="#FFC107"/>
+    <!-- Inner Yellow/White Flame -->
+    <path d="M 0 -40 C 0 -40 -10 -10 -10 10 C -10 20 -5 25 0 25 C 5 25 10 20 10 10 C 10 -10 0 -40 0 -40 Z" fill="#FFF8E1"/>
+  </g>
+</g>
+
+<!-- ================= TRANSITION: CLOSING EYES & HANDS ================= -->
+<!-- Pitch black shutters sliding in to simulate hands covering the eyes -->
+<rect x="-340" y="0" width="340" height="780" fill="#020202">
+  <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 340,0; 340,0; 0,0" keyTimes="0; 0.24; 0.26; 0.95; 0.97" dur="24s" repeatCount="indefinite"/>
+</rect>
+<rect x="680" y="0" width="340" height="780" fill="#020202">
+  <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; -340,0; -340,0; 0,0" keyTimes="0; 0.24; 0.26; 0.95; 0.97" dur="24s" repeatCount="indefinite"/>
+</rect>
+
+<!-- Viewpoint Center Target (helps show where the center of vision is in the dark) -->
+<circle cx="340" cy="420" r="30" fill="none" stroke="#222" stroke-dasharray="4 4" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.26; 0.28; 0.95; 0.97" dur="24s" repeatCount="indefinite"/>
+</circle>
+
+<!-- ================= SCENE 2: THE AFTERIMAGE (IMPRINT) ================= -->
+<g id="afterimage" transform="translate(340, 420)" opacity="0">
+  
+  <!-- Appearance: Fades in after eyes close, fades out before eyes open -->
+  <animate attributeName="opacity" values="0; 0; 0; 0.8; 0.8; 0; 0" keyTimes="0; 0.26; 0.28; 0.30; 0.92; 0.95; 1" dur="24s" repeatCount="indefinite"/>
+
+  <!-- Drift Motion (Translate): Imprint wanders around, then gets pulled back to center -->
+  <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,0; 60,-40; -70,30; 40,60; -50,-20; 0,0; 0,0; 0,0"
+      keyTimes="0; 0.30; 0.36; 0.42; 0.48; 0.54; 0.60; 0.95; 1"
+      dur="24s" repeatCount="indefinite" additive="sum"/>
+
+  <!-- Condense/Shrink (Scale): Starts normal, shrinks during Phase 4 -->
+  <animateTransform attributeName="transform" type="scale"
+      values="1,1; 1,1; 1,1; 0.7,0.7; 0.4,0.4; 0.15,0.15; 0,0; 0,0"
+      keyTimes="0; 0.30; 0.60; 0.70; 0.80; 0.90; 0.92; 1"
+      dur="24s" repeatCount="indefinite" additive="sum"/>
+
+  <!-- The Imprint Path (same flame shape, but glowing and blurry) -->
+  <path d="M 0 -70 C 0 -70 -20 0 -20 20 C -20 35 -10 45 0 45 C 10 45 20 35 20 20 C 20 0 0 -70 0 -70 Z" filter="url(#afterimageBlur)">
+    <!-- Color Change: Bright White -> Pink -> Red -> Dark Red -> Black -->
+    <animate attributeName="fill"
+        values="#FFFFFF; #FFFFFF; #FFFFFF; #FF80AB; #D50000; #3E0000; #000000"
+        keyTimes="0; 0.30; 0.60; 0.70; 0.80; 0.90; 1"
+        dur="24s" repeatCount="indefinite"/>
+  </path>
+</g>
+
+<!-- ================= TEXTS & INSTRUCTIONS ================= -->
+<text x="340" y="80" font-family="sans-serif" font-size="22" font-weight="bold" fill="#F0F0F0" text-anchor="middle" filter="url(#textGlow)">
+  Candle Flame Concentration
+</text>
+
+<!-- Phase 1 Text -->
+<text x="340" y="115" font-family="sans-serif" font-size="14" fill="#FFC107" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 1: Stare directly at the physical flame. Do not lose focus.</tspan>
+  <animate attributeName="opacity" values="1; 1; 0; 0; 0; 1" keyTimes="0; 0.23; 0.25; 0.96; 0.98; 1" dur="24s" repeatCount="indefinite"/>
+</text>
+
+<!-- Phase 2 Text -->
+<text x="340" y="115" font-family="sans-serif" font-size="14" fill="#81D4FA" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 2: Eyes closed, hands cupped. The imprint drifts in your vision.</tspan>
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.25; 0.28; 0.58; 0.60; 1" dur="24s" repeatCount="indefinite"/>
+</text>
+
+<!-- Phase 3 Text -->
+<text x="340" y="115" font-family="sans-serif" font-size="14" fill="#FF80AB" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>Phase 3 (Intermediate): Pull it to the center. Condense it. Change its color.</tspan>
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.59; 0.61; 0.94; 0.96" dur="24s" repeatCount="indefinite"/>
+</text>
+
+<text x="340" y="140" font-family="sans-serif" font-size="14" fill="#D50000" font-weight="bold" text-anchor="middle" opacity="0">
+  <tspan>(White ➔ Pink ➔ Red ➔ Dark)</tspan>
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.59; 0.61; 0.94; 0.96" dur="24s" repeatCount="indefinite"/>
+</text>
+
+
+<!-- ================= PHYSICAL POSTURE ICON (Bottom Right) ================= -->
+<!-- This serves to remind the user what they should physically be doing -->
+<g transform="translate(560, 620)">
+  <!-- Text label -->
+  <text x="0" y="-15" font-family="sans-serif" font-size="10" fill="#666" text-anchor="middle">Physical Posture</text>
+  
+  <!-- Line art of the girl cupping her eyes -->
+  <g stroke-width="2" fill="none">
+    <!-- Animate stroke color: dark when eyes open, bright when eyes close to highlight it -->
+    <animate attributeName="stroke" values="#333; #333; #AEEA00; #AEEA00; #333" keyTimes="0; 0.24; 0.26; 0.95; 0.97" dur="24s" repeatCount="indefinite"/>
+    
+    <!-- Head/Hair Outline -->
+    <path d="M -25 -20 Q -30 30 -40 50 M 25 -20 Q 30 30 40 50" />
+    <!-- Shoulders -->
+    <path d="M -35 50 Q -50 60 -60 120 M 35 50 Q 50 60 60 120" />
+    
+    <!-- Hands Covering Face (Filled to block the face lines underneath) -->
+    <!-- Left Hand -->
+    <path d="M -50 120 C -50 60 -20 30 -10 -5 C -5 -20 5 -20 0 -5 C -5 30 -20 60 -20 120 Z" fill="#080808">
+      <animate attributeName="stroke" values="#333; #333; #AEEA00; #AEEA00; #333" keyTimes="0; 0.24; 0.26; 0.95; 0.97" dur="24s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Right Hand -->
+    <path d="M 50 120 C 50 60 20 30 10 -5 C 5 -20 -5 -20 0 -5 C 5 30 20 60 20 120 Z" fill="#080808">
+      <animate attributeName="stroke" values="#333; #333; #AEEA00; #AEEA00; #333" keyTimes="0; 0.24; 0.26; 0.95; 0.97" dur="24s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</g>
+
+<!-- Side notes about the purpose -->
+<text x="30" y="680" font-family="sans-serif" font-size="12" fill="#555">
+  <tspan x="30" dy="0">Purpose:</tspan>
+  <tspan x="30" dy="18">Develops one-pointed,</tspan>
+  <tspan x="30" dy="18">laser-like concentration</tspan>
+  <tspan x="30" dy="18">and trains the 3rd Eye.</tspan>
+</text>
+
+</svg>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADu0lEQVR42q1Ta09UVxSdmv6DNk36C2o/YRtqo31ZwNoHbSkJjU3TNJZPTRttYlPTxoiJ9gEaFDUF5srUuVNmNAqMyCg+MmgwMANEghiMMuCAZCAg3sfcx1xey33OZR4YGY2Zk6zMPnuvs9acffdxPOsCsAY9UinC0lcsduR6ISy3YCjux+14M8XNOTeo6MCL2h3joXlXV1icc4OPG63WEl8CXxI+oTin4h+J8VcKPRa2nUpwsJjlcmbwzzktj4n2dajoJbCY5XJmMD9s/l52ykKZz8bXFM8PG7ueY1LUlwC8kJlje4wYo9d6TBQ3WfjstIVOiikXSXEz+X3qy9lGsZIwgLBUksoNGxtIDEuEHWM6dkxoTNzGqLE+fVbZgpAcpvPCqgZEOEgELCNIRnmLUaMqNmRACCZQFjRR1mHymHLMpBK96mvEa8s415DFQNmTQcSVK9pCqc9aZB+VYXOjjqL/TST3JV5jodavzDFuGkr16gY9yvZM8jcn+UimcGj4IA5HqlbkCo7LeMygIouBVJokWiEZRSTwoZg2+S3kx66epuSe1951KkiEpLRBSPludYM+dW2SON6pcJH8Opn9Pgm8tkFQMXI1w6A7/vpKUTG2G+LkCMeB0VlclxYYsTeocpH3G5SU4OV+AZduHLf/vdtEkUvGRpeGtvPL4l3SEqpGddJ6aGNqnwOemVdpoxKAmijQMsXJrRc1LrQ/oIEeGY+7B4+g99YhFHiobQ0y/qbae/8ZONys2AbnpoHqe2Ba3MAbs98EbXbypHMCOBblZCGgc9FAV4KPZWZr3mnQsKdVRRvVNtFNfvEtt6h+DKi7bxt4Jn9Mt6kCayh5lQBqE9TADLafscdxsN9EMGzHQvt+ONv/wnqnikBnnGp2/lOXBLl9BqgcSYqff/yV81YtilPjra5ZlLoNfvBbGlNrSMfFkC0UCeVhLLwWbwsqWq6pVNOIY99iS72EA3XTII0Ib01yUT9/psMxGsm9X4iJCMXYSge8ZKR2KcDNOP68YLfo88YZBt73H07KvKZ2K/CemMXWEwbPb3QqUwVucy/TLBQTPzk2N86to80EYalcNHSfR8KA+ADXj03irHsW+/xGqvcVNYP44+gQjzeR2O4mDX4PcY/EMOB+AK8oYZvH0JgW02Ta/BaF4lw5JQwCsmH816OY3lmdlUOPb+HNWnn+LUGpSbWJCjcJeBrKnRMMT+Xl18t4o1ZSVn6H7DfQi0Uz+r1L72coFhNRlnsS9wPRtNb9K83lC3K9w+FwPAIIUIRh19D9kQAAAABJRU5ErkJggg==" />
+<meta charset="UTF-8">
+<title>Twin Serpent Meditation — Caduceus &amp; Light-Speed Staff</title>
+</head>
+<body style="margin:0;padding:24px;background:#0d0d0d;display:flex;justify-content:center;font-family:sans-serif;">
+
+<svg width="720" height="940" viewBox="0 0 720 940" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Twin Serpent Meditation — Caduceus Alignment and Sushumna Staff</title>
+<desc>A 24-second visual loop showcasing the rise of dual ciano and gold serpents crossing at each pyramid chakra, with a central staff spinning at high frequency (light-speed simulation).</desc>
+
+<defs>
+  <!-- Glow Filters -->
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="5" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  
+  <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="12" result="blur" />
+    <feComponentTransfer in="blur" result="glow">
+      <feFuncA type="linear" slope="1.5"/>
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Staff/Central Channel Gradient -->
+  <linearGradient id="staffGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#FFD54F" stop-opacity="0.2"/>
+    <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+    <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.2"/>
+  </linearGradient>
+
+  <!-- Reusable Base Figure (Dark Silhouette) -->
+  <g id="meditating-figure">
+    <ellipse cx="300" cy="720" rx="115" ry="13" fill="#888780" opacity="0.15"/>
+    <path d="M215 700 Q205 660 220 630 Q235 615 260 615 L260 640 Q245 655 245 680 Q245 700 260 705 Z" fill="#5F5E5A" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M385 700 Q395 660 380 630 Q365 615 340 615 L340 640 Q355 655 355 680 Q355 700 340 705 Z" fill="#5F5E5A" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M225 615 Q210 560 225 520 Q235 495 260 480 L260 500 Q245 515 240 540 Q235 570 245 605 Q250 615 260 618 Z" fill="#5F5E5A" opacity="0.38" stroke="#444441" stroke-width="1"/>
+    <path d="M375 615 Q390 560 375 520 Q365 495 340 480 L340 500 Q355 515 360 540 Q365 570 355 605 Q350 615 340 618 Z" fill="#5F5E5A" opacity="0.38" stroke="#444441" stroke-width="1"/>
+    <path d="M245 630 Q225 590 235 550 L250 500 Q235 480 238 460 Q255 452 300 450 Q345 452 362 460 Q365 480 350 500 L365 550 Q375 590 355 630 Q300 650 245 630 Z" fill="#6B6A65" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M258 460 Q248 400 262 355 Q275 330 300 322 Q325 330 338 355 Q352 400 342 460 Q321 470 300 471 Q279 470 258 460 Z" fill="#888780" opacity="0.32" stroke="#5F5E5A" stroke-width="1"/>
+    <circle cx="300" cy="278" r="42" fill="#B4B2A9" opacity="0.4" stroke="#5F5E5A" stroke-width="1"/>
+    <path d="M262 265 Q262 224 300 218 Q338 224 338 265 Q338 238 300 232 Q262 238 262 265 Z" fill="#2C2C2A" opacity="0.55"/>
+    <ellipse cx="286" cy="280" rx="3" ry="4" fill="#2C2C2A" opacity="0.4"/>
+    <ellipse cx="314" cy="280" rx="3" ry="4" fill="#2C2C2A" opacity="0.4"/>
+    <path d="M292 300 Q300 305 308 300" stroke="#5F5E5A" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M270 246 Q286 240 298 244" stroke="#2C2C2A" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M330 246 Q314 240 302 244" stroke="#2C2C2A" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+  </g>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="720" height="940" fill="#0d0d0d"/>
+
+
+<!-- ================= THE SPINNING STAFF OF LIGHT (Sushumna) ================= -->
+<!-- Rapidly scales horizontal dimension to simulate light-speed spinning -->
+<g filter="url(#heavyGlow)">
+  <rect x="294" y="145" width="12" height="480" fill="url(#staffGrad)" rx="6" opacity="0.2">
+    <!-- Opacity changes according to timing phase -->
+    <animate attributeName="opacity" values="0.2; 1; 0.4; 1; 0.2" keyTimes="0; 0.125; 0.25; 0.666; 1" dur="24s" repeatCount="indefinite" />
+    <!-- High frequency width flicker (light-speed simulation) -->
+    <animate attributeName="width" values="4; 16; 4" dur="0.1s" repeatCount="indefinite" />
+    <animate attributeName="x" values="298; 292; 298" dur="0.1s" repeatCount="indefinite" />
+  </rect>
+</g>
+
+
+<!-- ================= THE MEDITATING FIGURE ================= -->
+<use href="#meditating-figure" />
+
+
+<!-- ================================================================= -->
+<!-- ===================== THE TWIN SERPENTS ======================== -->
+<!-- ================================================================= -->
+<!-- Left Serpent (Cyan/Moon energy) - rises from left of Root, crossing at each center -->
+<path d="M 300 605 C 240 605, 240 545, 300 545 C 360 545, 360 455, 300 455 C 240 455, 240 375, 300 375 C 360 375, 360 315, 300 315 C 244 315, 244 255, 300 255 C 350 255, 350 215, 300 215 C 255 215, 255 160, 300 160"
+      fill="none" stroke="#00E5FF" stroke-width="4.5" filter="url(#glow)" stroke-linecap="round" stroke-dasharray="140 700" stroke-dashoffset="840">
+  <animate attributeName="stroke-dashoffset" values="840; 840; 0; 0; 840" keyTimes="0; 0.25; 0.583; 0.916; 1" dur="24s" repeatCount="indefinite" />
+  <animate attributeName="opacity" values="0; 1; 1; 1; 0" keyTimes="0; 0.24; 0.25; 0.916; 1" dur="24s" repeatCount="indefinite" />
+</path>
+
+<!-- Right Serpent (Gold/Sun energy) - rises from right of Root, crossing symmetrically -->
+<path d="M 300 605 C 360 605, 360 545, 300 545 C 240 545, 240 455, 300 455 C 360 455, 360 375, 300 375 C 240 375, 240 315, 300 315 C 356 315, 356 255, 300 255 C 250 255, 250 215, 300 215 C 345 215, 345 160, 300 160"
+      fill="none" stroke="#FFD54F" stroke-width="4.5" filter="url(#glow)" stroke-linecap="round" stroke-dasharray="140 700" stroke-dashoffset="840">
+  <animate attributeName="stroke-dashoffset" values="840; 840; 0; 0; 840" keyTimes="0; 0.25; 0.583; 0.916; 1" dur="24s" repeatCount="indefinite" />
+  <animate attributeName="opacity" values="0; 1; 1; 1; 0" keyTimes="0; 0.24; 0.25; 0.916; 1" dur="24s" repeatCount="indefinite" />
+</path>
+
+
+<!-- ================================================================= -->
+<!-- ============= THE CHAKRAS (Respecting Original Design) ============= -->
+<!-- ================================================================= -->
+
+<!-- 1st Root — Red -->
+<g transform="translate(300,605)">
+  <circle r="25" fill="#E24B4A" opacity="0.1" filter="url(#glow)"/>
+  <polygon points="0,-22 19,11 -19,11" fill="#E24B4A" stroke="#791F1F" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,-22 19,11 0,11" fill="#F7C1C1">
+    <animate attributeName="opacity" values="0.1;0.65;0.1;0.1;0.1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,-22 -19,11 0,11" fill="#FCEBEB">
+    <animate attributeName="opacity" values="0.55;0.1;0.55;0.55;0.55" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+</g>
+
+<!-- 2nd Sacral — Orange -->
+<g transform="translate(300,545)">
+  <circle r="25" fill="#F0997B" opacity="0.1" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.1; 0.8; 0.1; 0.8; 0.1" keyTimes="0; 0.29; 0.35; 0.85; 1" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <polygon points="0,-22 19,11 -19,11" fill="#F0997B" stroke="#712B13" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,-22 19,11 0,11" fill="#FAECE7">
+    <animate attributeName="opacity" values="0.1;0.65;0.1;0.1;0.1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,-22 -19,11 0,11" fill="#F5C4B3">
+    <animate attributeName="opacity" values="0.55;0.1;0.55;0.55;0.55" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+</g>
+
+<!-- 3rd Solar Plexus — Gold -->
+<g transform="translate(300,455)">
+  <circle r="25" fill="#F2A623" opacity="0.1" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.1; 0.8; 0.1; 0.8; 0.1" keyTimes="0; 0.33; 0.39; 0.81; 1" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <polygon points="0,22 19,-11 -19,-11" fill="#F2A623" stroke="#633806" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,22 19,-11 0,-11" fill="#FAEEDA">
+    <animate attributeName="opacity" values="0.1;0.65;0.1;0.1;0.1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,22 -19,-11 0,-11" fill="#FAC775">
+    <animate attributeName="opacity" values="0.55;0.1;0.55;0.55;0.55" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+</g>
+
+<!-- 4th Heart — Green -->
+<g transform="translate(300,375)">
+  <circle r="25" fill="#5DCAA5" opacity="0.1" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.1; 0.8; 0.1; 0.8; 0.1" keyTimes="0; 0.37; 0.43; 0.77; 1" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <polygon points="0,-20 18,0 0,20 -18,0" fill="#5DCAA5" stroke="#085041" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,-20 18,0 0,20" fill="#E1F5EE">
+    <animate attributeName="opacity" values="0.1;0.65;0.1;0.1;0.1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,-20 -18,0 0,20" fill="#9FE1CB">
+    <animate attributeName="opacity" values="0.55;0.1;0.55;0.55;0.55" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+</g>
+
+<!-- 5th Throat — Sky Blue -->
+<g transform="translate(300,315)">
+  <circle r="25" fill="#378ADD" opacity="0.1" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.1; 0.8; 0.1; 0.8; 0.1" keyTimes="0; 0.41; 0.47; 0.73; 1" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <polygon points="0,20 17,-10 -17,-10" fill="#378ADD" stroke="#042C53" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,20 17,-10 0,-10" fill="#E6F1FB">
+    <animate attributeName="opacity" values="0.1;0.65;0.1;0.1;0.1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,20 -17,-10 0,-10" fill="#85B7EB">
+    <animate attributeName="opacity" values="0.55;0.1;0.55;0.55;0.55" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+</g>
+
+<!-- 6th Third Eye — Indigo -->
+<g transform="translate(300,255)">
+  <circle r="25" fill="#7F77DD" opacity="0.1" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.1; 0.8; 0.1; 0.8; 0.1" keyTimes="0; 0.45; 0.51; 0.69; 1" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <polygon points="0,17 15,-9 -15,-9" fill="#7F77DD" stroke="#26215C" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,17 15,-9 0,-9" fill="#EEEDFE">
+    <animate attributeName="opacity" values="0.1;0.65;0.1;0.1;0.1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,17 -15,-9 0,-9" fill="#CECBF6">
+    <animate attributeName="opacity" values="0.55;0.1;0.55;0.55;0.55" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+</g>
+
+<!-- 7th Crown — Violet -->
+<g transform="translate(300,215)">
+  <polygon points="0,15 13,-8 -13,-8" fill="#D4537E" stroke="#4B1528" stroke-width="1">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,15 13,-8 0,-8" fill="#FBEAF0">
+    <animate attributeName="opacity" values="0.1;0.65;0.1;0.1;0.1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,15 -13,-8 0,-8" fill="#F4C0D1">
+    <animate attributeName="opacity" values="0.55;0.1;0.55;0.55;0.55" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+</g>
+
+<!-- 8th/9th Above Head Golden Chakra — Optional Gold (Styled after original elements) -->
+<g transform="translate(300,160)">
+  <circle r="22" fill="#FFD54F" opacity="0.15" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.15; 0.9; 0.9; 0.15" keyTimes="0; 0.55; 0.90; 1" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <polygon points="0,-16 14,0 0,16 -14,0" fill="#FF9100" stroke="#FFD54F" stroke-width="1.2">
+    <animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,-16 14,0 0,16" fill="#FFF8E1">
+    <animate attributeName="opacity" values="0.1;0.7;0.1;0.1;0.1" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="0,-16 -14,0 0,16" fill="#FFE082">
+    <animate attributeName="opacity" values="0.6;0.1;0.6;0.6;0.6" dur="0.55s" repeatCount="indefinite"/>
+  </polygon>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ================ LABELS & DOTTED POINTERS (Right) ================ -->
+<!-- ================================================================= -->
+<g stroke="#444" stroke-width="1" stroke-dasharray="3 3">
+  <!-- Golden 8th/9th Chakra Line -->
+  <line x1="320" y1="160" x2="505" y2="165" />
+  <!-- Central Staff Line -->
+  <line x1="312" y1="410" x2="505" y2="415" />
+  <!-- Twin Serpents Line -->
+  <line x1="245" y1="495" x2="505" y2="500" />
+</g>
+
+<!-- Labeled Texts -->
+<g font-family="sans-serif" font-size="11" fill="#cccccc" font-weight="bold">
+  <!-- Golden Chakra Label -->
+  <text x="510" y="169" fill="#FFD54F" filter="url(#glow)">8th/9th Golden Chakra</text>
+  <text x="510" y="184" font-weight="normal" fill="#888">Floating solar gateway above the Crown</text>
+
+  <!-- Central Staff Label -->
+  <text x="510" y="419" fill="#FFFFFF">Spinning Staff (Sushumna)</text>
+  <text x="510" y="434" font-weight="normal" fill="#888">Light column rotating at the speed of light</text>
+
+  <!-- Twin Serpents Label -->
+  <text x="510" y="504" fill="#00E5FF">Twin Serpents (Caduceus)</text>
+  <text x="510" y="519" font-weight="normal" fill="#888">Dual polar currents merging at each node</text>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ==================== MEDITATION GUIDE PANEL ===================== -->
+<!-- ================================================================= -->
+<g transform="translate(0, 0)">
+  <!-- Panel Glass Frame -->
+  <rect x="30" y="770" width="660" height="145" rx="14" fill="#111116" stroke="#2c2c35" stroke-width="1.5" />
+  
+  <!-- PHASE 1 TEXTS (0s - 6s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="1; 1; 0; 0; 0" keyTimes="0; 0.23; 0.25; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle" filter="url(#glow)">
+      PHASE 1: ESTABLISH &amp; SPIN THE STAFF OF LIGHT
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Visualize a shaft of pristine light connecting your Root all the way to the Crown.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFD54F" font-weight="bold" text-anchor="middle">
+      "Expand the channel into a staff and command it to spin at the speed of light."
+    </text>
+  </g>
+
+  <!-- PHASE 2 TEXTS (6s - 16s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.23; 0.25; 0.65; 0.67; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#00E5FF" text-anchor="middle" filter="url(#glow)">
+      PHASE 2: THE TWIN SERPENTS ASCEND
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Unleash two bright serpents (Gold and Cyan) from the Root.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFFFFF" font-weight="bold" text-anchor="middle">
+      "See them weave outward and cross at each chakra, illuminating them in union."
+    </text>
+  </g>
+
+  <!-- PHASE 3 TEXTS (16s - 22s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.65; 0.67; 0.90; 0.92; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#FFD54F" text-anchor="middle" filter="url(#glow)">
+      PHASE 3: UNION &amp; SPEED OF LIGHT ROTATION
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      With the serpents united at the golden chakra, spin the staff once more.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#00E5FF" font-weight="bold" text-anchor="middle">
+      "Vibrate the central shaft at maximum speed, radiating infinite psychic power."
+    </text>
+  </g>
+
+  <!-- PHASE 4 TEXTS (22s - 24s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.90; 0.92; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#AEEA00" text-anchor="middle" filter="url(#glow)">
+      PHASE 4: AURIC HARMONIZATION
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Let the high-speed motion settle. Purify your aura and integrate the currents.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#AEEA00" font-weight="bold" text-anchor="middle">
+      "Bask in the residual bioelectric hum. Feel balanced and complete."
+    </text>
+  </g>
+</g>
+
+<!-- Side notes -->
+<text x="40" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="40" dy="0" fill="#00E5FF" font-weight="bold">Dual Serpents:</tspan>
+  <tspan x="40" dy="18">The polar channels of</tspan>
+  <tspan x="40" dy="18">yin and yang cross</tspan>
+  <tspan x="40" dy="18">harmoniously at each node.</tspan>
+</text>
+
+<text x="480" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="480" dy="0" fill="#FFD54F" font-weight="bold">Light-Speed Spin:</tspan>
+  <tspan x="480" dy="18">The rapid vertical rotation</tspan>
+  <tspan x="480" dy="18">purifies blocked seals</tspan>
+  <tspan x="480" dy="18">and charges your astral body.</tspan>
+</text>
+
+</svg>
+</body>
+</html>

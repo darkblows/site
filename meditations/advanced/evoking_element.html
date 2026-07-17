@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADu0lEQVR42q1Ta09UVxSdmv6DNk36C2o/YRtqo31ZwNoHbSkJjU3TNJZPTRttYlPTxoiJ9gEaFDUF5srUuVNmNAqMyCg+MmgwMANEghiMMuCAZCAg3sfcx1xey33OZR4YGY2Zk6zMPnuvs9acffdxPOsCsAY9UinC0lcsduR6ISy3YCjux+14M8XNOTeo6MCL2h3joXlXV1icc4OPG63WEl8CXxI+oTin4h+J8VcKPRa2nUpwsJjlcmbwzzktj4n2dajoJbCY5XJmMD9s/l52ykKZz8bXFM8PG7ueY1LUlwC8kJlje4wYo9d6TBQ3WfjstIVOiikXSXEz+X3qy9lGsZIwgLBUksoNGxtIDEuEHWM6dkxoTNzGqLE+fVbZgpAcpvPCqgZEOEgELCNIRnmLUaMqNmRACCZQFjRR1mHymHLMpBK96mvEa8s415DFQNmTQcSVK9pCqc9aZB+VYXOjjqL/TST3JV5jodavzDFuGkr16gY9yvZM8jcn+UimcGj4IA5HqlbkCo7LeMygIouBVJokWiEZRSTwoZg2+S3kx66epuSe1951KkiEpLRBSPludYM+dW2SON6pcJH8Opn9Pgm8tkFQMXI1w6A7/vpKUTG2G+LkCMeB0VlclxYYsTeocpH3G5SU4OV+AZduHLf/vdtEkUvGRpeGtvPL4l3SEqpGddJ6aGNqnwOemVdpoxKAmijQMsXJrRc1LrQ/oIEeGY+7B4+g99YhFHiobQ0y/qbae/8ZONys2AbnpoHqe2Ba3MAbs98EbXbypHMCOBblZCGgc9FAV4KPZWZr3mnQsKdVRRvVNtFNfvEtt6h+DKi7bxt4Jn9Mt6kCayh5lQBqE9TADLafscdxsN9EMGzHQvt+ONv/wnqnikBnnGp2/lOXBLl9BqgcSYqff/yV81YtilPjra5ZlLoNfvBbGlNrSMfFkC0UCeVhLLwWbwsqWq6pVNOIY99iS72EA3XTII0Ib01yUT9/psMxGsm9X4iJCMXYSge8ZKR2KcDNOP68YLfo88YZBt73H07KvKZ2K/CemMXWEwbPb3QqUwVucy/TLBQTPzk2N86to80EYalcNHSfR8KA+ADXj03irHsW+/xGqvcVNYP44+gQjzeR2O4mDX4PcY/EMOB+AK8oYZvH0JgW02Ta/BaF4lw5JQwCsmH816OY3lmdlUOPb+HNWnn+LUGpSbWJCjcJeBrKnRMMT+Xl18t4o1ZSVn6H7DfQi0Uz+r1L72coFhNRlnsS9wPRtNb9K83lC3K9w+FwPAIIUIRh19D9kQAAAABJRU5ErkJggg==" />
+<meta charset="UTF-8">
+<title>Elemental Evocation — Symmetrical Caduceus Focus</title>
+</head>
+<body style="margin:0;padding:24px;background:#0d0d0d;display:flex;justify-content:center;font-family:sans-serif;">
+
+<svg width="720" height="940" viewBox="0 0 720 940" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Elemental Evocation — External Sphere Condensation and Dissolution</title>
+<desc>A 24-second loop demonstrating the evocation of the four elements into an external sphere in front of the body. Phase 1: Fire (0-6s). Phase 2: Air (6-12s). Phase 3: Water (12-18s). Phase 4: Earth (18-24s).</desc>
+
+<defs>
+  <!-- Glow Filters -->
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="5" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  
+  <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="12" result="blur" />
+    <feComponentTransfer in="blur" result="glow">
+      <feFuncA type="linear" slope="1.5"/>
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Gradients for Element Spheres -->
+  <radialGradient id="fireSphere" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+    <stop offset="35%" stop-color="#FF5252" stop-opacity="0.8"/>
+    <stop offset="70%" stop-color="#FF9100" stop-opacity="0.4"/>
+    <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+  </radialGradient>
+
+  <radialGradient id="airSphere" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+    <stop offset="45%" stop-color="#E0F7FA" stop-opacity="0.75"/>
+    <stop offset="80%" stop-color="#80DEEA" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+  </radialGradient>
+
+  <radialGradient id="waterSphere" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.9"/>
+    <stop offset="50%" stop-color="#2979FF" stop-opacity="0.5"/>
+    <stop offset="85%" stop-color="#1A237E" stop-opacity="0.1"/>
+    <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+  </radialGradient>
+
+  <radialGradient id="earthSphere" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#D7CCC8" stop-opacity="0.85"/>
+    <stop offset="40%" stop-color="#8D6E63" stop-opacity="0.6"/>
+    <stop offset="80%" stop-color="#3E2723" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Reusable Base Figure (Dark Silhouette with exact face details) -->
+  <g id="meditating-figure">
+    <ellipse cx="300" cy="720" rx="115" ry="13" fill="#888780" opacity="0.15"/>
+    <path d="M215 700 Q205 660 220 630 Q235 615 260 615 L260 640 Q245 655 245 680 Q245 700 260 705 Z" fill="#5F5E5A" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M385 700 Q395 660 380 630 Q365 615 340 615 L340 640 Q355 655 355 680 Q355 700 340 705 Z" fill="#5F5E5A" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M225 615 Q210 560 225 520 Q235 495 260 480 L260 500 Q245 515 240 540 Q235 570 245 605 Q250 615 260 618 Z" fill="#5F5E5A" opacity="0.38" stroke="#444441" stroke-width="1"/>
+    <path d="M375 615 Q390 560 375 520 Q365 495 340 480 L340 500 Q355 515 360 540 Q365 570 355 605 Q350 615 340 618 Z" fill="#5F5E5A" opacity="0.38" stroke="#444441" stroke-width="1"/>
+    <path d="M245 630 Q225 590 235 550 L250 500 Q235 480 238 460 Q255 452 300 450 Q345 452 362 460 Q365 480 350 500 L365 550 Q375 590 355 630 Q300 650 245 630 Z" fill="#6B6A65" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M258 460 Q248 400 262 355 Q275 330 300 322 Q325 330 338 355 Q352 400 342 460 Q321 470 300 471 Q279 470 258 460 Z" fill="#888780" opacity="0.32" stroke="#5F5E5A" stroke-width="1"/>
+    <circle cx="300" cy="278" r="42" fill="#B4B2A9" opacity="0.4" stroke="#5F5E5A" stroke-width="1"/>
+    <path d="M262 265 Q262 224 300 218 Q338 224 338 265 Q338 238 300 232 Q262 238 262 265 Z" fill="#2C2C2A" opacity="0.55"/>
+    <ellipse cx="286" cy="280" rx="3" ry="4" fill="#2C2C2A" opacity="0.4"/>
+    <ellipse cx="314" cy="280" rx="3" ry="4" fill="#2C2C2A" opacity="0.4"/>
+    <path d="M292 300 Q300 305 308 300" stroke="#5F5E5A" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M270 246 Q286 240 298 244" stroke="#2C2C2A" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M330 246 Q314 240 302 244" stroke="#2C2C2A" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+  </g>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="720" height="940" fill="#0d0d0d"/>
+
+
+<!-- ================= THE MEDITATING FIGURE ================= -->
+<use href="#meditating-figure" />
+
+
+<!-- ================================================================= -->
+<!-- ======================= STATIC CHAKRAS ========================== -->
+<!-- ================================================================= -->
+<!-- Kept subtle to emphasize the external focus sphere -->
+<g transform="translate(300,605)" opacity="0.25">
+  <polygon points="0,-22 19,11 -19,11" fill="#E24B4A" stroke="#791F1F" stroke-width="1"><animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/></polygon>
+</g>
+<g transform="translate(300,375)" opacity="0.25">
+  <polygon points="0,-20 18,0 0,20 -18,0" fill="#5DCAA5" stroke="#085041" stroke-width="1"><animateTransform attributeName="transform" type="scale" values="1,1;0.1,1;-1,1;0.1,1;1,1" dur="0.55s" repeatCount="indefinite"/></polygon>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ================ THE EXTERNAL EVOCATION SPHERES ================= -->
+<!-- ================================================================= -->
+<!-- Located at X=300, Y=410, floating in front of the body's chest -->
+
+<!-- STAGE 1: FIRE SPHERE (0s - 6s) -->
+<g filter="url(#heavyGlow)" opacity="0">
+  <animate attributeName="opacity" values="0.85; 0.85; 0; 0; 0" keyTimes="0; 0.22; 0.25; 0.98; 1" dur="24s" repeatCount="indefinite"/>
+  <circle cx="300" cy="410" r="50" fill="url(#fireSphere)">
+    <animate attributeName="r" values="45; 55; 45" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Incoming Fire Particles -->
+  <g stroke="#FF9100" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <path d="M 120 410 L 250 410" stroke-dasharray="15 60"><animate attributeName="stroke-dashoffset" values="0; -75" dur="1s" repeatCount="indefinite"/></path>
+    <path d="M 480 410 L 350 410" stroke-dasharray="15 60"><animate attributeName="stroke-dashoffset" values="0; 75" dur="1s" repeatCount="indefinite"/></path>
+    <path d="M 300 230 L 300 360" stroke-dasharray="15 60"><animate attributeName="stroke-dashoffset" values="0; -75" dur="1s" repeatCount="indefinite"/></path>
+  </g>
+</g>
+
+<!-- STAGE 2: AIR SPHERE (6s - 12s) -->
+<g filter="url(#glow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0.85; 0.85; 0; 0" keyTimes="0; 0.23; 0.25; 0.47; 0.49; 1" dur="24s" repeatCount="indefinite"/>
+  <circle cx="300" cy="410" r="55" fill="url(#airSphere)">
+    <animate attributeName="r" values="50; 60; 50" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Swirling Breezy Rings -->
+  <ellipse cx="300" cy="410" rx="65" ry="20" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="8 12">
+    <animateTransform attributeName="transform" type="rotate" values="0 300 410; 360 300 410" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+</g>
+
+<!-- STAGE 3: WATER SPHERE (12s - 18s) -->
+<g filter="url(#heavyGlow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0.9; 0.9; 0; 0" keyTimes="0; 0.48; 0.50; 0.72; 0.74; 1" dur="24s" repeatCount="indefinite"/>
+  <circle cx="300" cy="410" r="50" fill="url(#waterSphere)" />
+  <!-- Shrinking Cold Wave Ripples -->
+  <g stroke="#00E5FF" stroke-width="2" fill="none">
+    <circle cx="300" cy="410" r="90"><animate attributeName="r" values="90; 10" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0; 1; 0" keyTimes="0; 0.8; 1" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="410" r="120"><animate attributeName="r" values="120; 10" begin="1s" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0; 1; 0" keyTimes="0; 0.8; 1" begin="1s" dur="2s" repeatCount="indefinite"/></circle>
+  </g>
+</g>
+
+<!-- STAGE 4: EARTH SPHERE (18s - 24s) -->
+<g filter="url(#glow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0.8; 0.8; 0" keyTimes="0; 0.73; 0.75; 0.97; 1" dur="24s" repeatCount="indefinite"/>
+  <circle cx="300" cy="410" r="45" fill="url(#earthSphere)" stroke="#8D6E63" stroke-width="2" />
+  <!-- Heavy condensing blocks -->
+  <g stroke="#5D4037" stroke-width="1.5" fill="none" opacity="0.5">
+    <rect x="230" y="340" width="140" height="140" rx="10"><animateTransform attributeName="transform" type="scale" values="1.3; 1" transform-origin="300 410" dur="2.5s" repeatCount="indefinite"/></rect>
+    <rect x="245" y="355" width="110" height="110" rx="8"><animateTransform attributeName="transform" type="scale" values="1.5; 1" transform-origin="300 410" dur="2s" repeatCount="indefinite"/></rect>
+  </g>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ================ LABELS & DOTTED POINTERS (Right) ================ -->
+<!-- ================================================================= -->
+<g stroke="#444" stroke-width="1" stroke-dasharray="3 3">
+  <!-- External Focus Sphere Line -->
+  <line x1="315" y1="410" x2="505" y2="415" />
+  <!-- Universal Inflow Line -->
+  <line x1="435" y1="365" x2="505" y2="305" />
+  <!-- Core Mind Base Line -->
+  <line x1="310" y1="278" x2="505" y2="185" />
+</g>
+
+<!-- Labeled Texts -->
+<g font-family="sans-serif" font-size="11" fill="#cccccc" font-weight="bold">
+  <!-- Core Mind Label -->
+  <text x="510" y="189" fill="#B4B2A9">Indifferent Mind (Trance Base)</text>
+  <text x="510" y="204" font-weight="normal" fill="#888">The observer remains neutral and detached</text>
+
+  <!-- Universal Inflow Label -->
+  <text x="510" y="309" fill="#00E5FF">Universal Accumulation</text>
+  <text x="510" y="324" font-weight="normal" fill="#888">Elements are drawn from the room, not the self</text>
+
+  <!-- Evoked Sphere Label -->
+  <text x="510" y="419" fill="#FFD54F" filter="url(#glow)">Evocation Target (Sphere)</text>
+  <text x="510" y="434" font-weight="normal" fill="#888">Externalized construct; condensed and dissolved</text>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ==================== MEDITATION GUIDE PANEL ===================== -->
+<!-- ================================================================= -->
+<g transform="translate(0, 0)">
+  <!-- Panel Glass Frame -->
+  <rect x="30" y="770" width="660" height="145" rx="14" fill="#111116" stroke="#2c2c35" stroke-width="1.5" />
+  
+  <!-- PHASE 1 TEXTS (0s - 6s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="1; 1; 0; 0; 0" keyTimes="0; 0.23; 0.25; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#FF5252" text-anchor="middle" filter="url(#glow)">
+      EVOK FIRE — CONDENSE & DISSOLVE (DON'T LET IT GET INTO YOUR HEART OR YOUR MIND!)
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Draw the element of Fire from all directions into an external sphere. Feel the heat rise.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFF59D" font-weight="bold" text-anchor="middle">
+      "Sustain the boiling density, then completely dissolve it back into nothingness."
+    </text>
+  </g>
+
+  <!-- PHASE 2 TEXTS (6s - 12s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.23; 0.25; 0.47; 0.49; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#E0F7FA" text-anchor="middle" filter="url(#glow)">
+      PHASE 2: EVOKING AIR — ACCUMULATE LIGHTNESS
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Fill the room with Air, then compact it into the sphere. Feel weightless and floating.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFFFFF" font-weight="bold" text-anchor="middle">
+      "Once compacted, dissolve the sphere of air slowly, letting it fade into the void."
+    </text>
+  </g>
+
+  <!-- PHASE 3 TEXTS (12s - 18s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.48; 0.50; 0.72; 0.74; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#00E5FF" text-anchor="middle" filter="url(#glow)">
+      PHASE 3: EVOKING WATER — CONDENSE ICY COLDNESS
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Draw the element of Water as a freezing vapor. Compress it. Feel glacial coldness.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#00E5FF" font-weight="bold" text-anchor="middle">
+      "Compress the water into the sphere, then let it evaporate completely into empty space."
+    </text>
+  </g>
+
+  <!-- PHASE 4 TEXTS (18s - 24s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.73; 0.75; 0.97; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#8D6E63" text-anchor="middle" filter="url(#glow)">
+      PHASE 4: EVOKING EARTH — MANIFEST GRAVITATIONAL WEIGHT
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Draw a heavy, rich clay-like mass from all directions. Squeeze it into a dense sphere.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#AEEA00" font-weight="bold" text-anchor="middle">
+      "Feel the crushing pressure and gravity. Finally, dissolve the mass back to nothing."
+    </text>
+  </g>
+</g>
+
+<!-- Side notes -->
+<text x="40" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="40" dy="0" fill="#00E5FF" font-weight="bold">Evoking vs Invoking:</tspan>
+  <tspan x="40" dy="18">Evoking draws energy from</tspan>
+  <tspan x="40" dy="18">the universe to a point,</tspan>
+  <tspan x="40" dy="18">preventing personal tethers.</tspan>
+</text>
+
+<text x="480" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="480" dy="0" fill="#FFD54F" font-weight="bold">Dissolution Rule:</tspan>
+  <tspan x="480" dy="18">Always dissolve evoked</tspan>
+  <tspan x="480" dy="18">spheres completely to avoid</tspan>
+  <tspan x="480" dy="18">lingering environmental effects.</tspan>
+</text>
+
+</svg>
+</body>
+</html>

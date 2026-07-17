@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADu0lEQVR42q1Ta09UVxSdmv6DNk36C2o/YRtqo31ZwNoHbSkJjU3TNJZPTRttYlPTxoiJ9gEaFDUF5srUuVNmNAqMyCg+MmgwMANEghiMMuCAZCAg3sfcx1xey33OZR4YGY2Zk6zMPnuvs9acffdxPOsCsAY9UinC0lcsduR6ISy3YCjux+14M8XNOTeo6MCL2h3joXlXV1icc4OPG63WEl8CXxI+oTin4h+J8VcKPRa2nUpwsJjlcmbwzzktj4n2dajoJbCY5XJmMD9s/l52ykKZz8bXFM8PG7ueY1LUlwC8kJlje4wYo9d6TBQ3WfjstIVOiikXSXEz+X3qy9lGsZIwgLBUksoNGxtIDEuEHWM6dkxoTNzGqLE+fVbZgpAcpvPCqgZEOEgELCNIRnmLUaMqNmRACCZQFjRR1mHymHLMpBK96mvEa8s415DFQNmTQcSVK9pCqc9aZB+VYXOjjqL/TST3JV5jodavzDFuGkr16gY9yvZM8jcn+UimcGj4IA5HqlbkCo7LeMygIouBVJokWiEZRSTwoZg2+S3kx66epuSe1951KkiEpLRBSPludYM+dW2SON6pcJH8Opn9Pgm8tkFQMXI1w6A7/vpKUTG2G+LkCMeB0VlclxYYsTeocpH3G5SU4OV+AZduHLf/vdtEkUvGRpeGtvPL4l3SEqpGddJ6aGNqnwOemVdpoxKAmijQMsXJrRc1LrQ/oIEeGY+7B4+g99YhFHiobQ0y/qbae/8ZONys2AbnpoHqe2Ba3MAbs98EbXbypHMCOBblZCGgc9FAV4KPZWZr3mnQsKdVRRvVNtFNfvEtt6h+DKi7bxt4Jn9Mt6kCayh5lQBqE9TADLafscdxsN9EMGzHQvt+ONv/wnqnikBnnGp2/lOXBLl9BqgcSYqff/yV81YtilPjra5ZlLoNfvBbGlNrSMfFkC0UCeVhLLwWbwsqWq6pVNOIY99iS72EA3XTII0Ib01yUT9/psMxGsm9X4iJCMXYSge8ZKR2KcDNOP68YLfo88YZBt73H07KvKZ2K/CemMXWEwbPb3QqUwVucy/TLBQTPzk2N86to80EYalcNHSfR8KA+ADXj03irHsW+/xGqvcVNYP44+gQjzeR2O4mDX4PcY/EMOB+AK8oYZvH0JgW02Ta/BaF4lw5JQwCsmH816OY3lmdlUOPb+HNWnn+LUGpSbWJCjcJeBrKnRMMT+Xl18t4o1ZSVn6H7DfQi0Uz+r1L72coFhNRlnsS9wPRtNb9K83lC3K9w+FwPAIIUIRh19D9kQAAAABJRU5ErkJggg==" />
+<meta charset="UTF-8">
+<title>Deep Trance Induction — Brainwave &amp; Descent Meditation</title>
+</head>
+<body style="margin:0;padding:24px;background:#0d0d0d;display:flex;justify-content:center;font-family:sans-serif;">
+
+<svg width="720" height="940" viewBox="0 0 720 940" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Deep Trance Meditation — Brainwave Shift &amp; Mental Descent</title>
+<desc>A 24-second visual loop. Phase 1: Inhale-hold-exhale cycle with left brain active in red. Phase 2: Rising rungs simulating downward descent as left brain fades and right brain glows in blue. Phase 3: Falling backward with soft particle cascades. Phase 4: Full hazy blue trance aura.</desc>
+
+<defs>
+  <!-- Glow Filters -->
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="5" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  
+  <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="12" result="blur" />
+    <feComponentTransfer in="blur" result="glow">
+      <feFuncA type="linear" slope="1.7"/>
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Hazy Trance Aura Gradient -->
+  <radialGradient id="tranceAura" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.75"/>
+    <stop offset="50%" stop-color="#2979FF" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Reusable Base Figure (Dark Silhouette with exact face details) -->
+  <g id="meditating-figure">
+    <ellipse cx="300" cy="720" rx="115" ry="13" fill="#888780" opacity="0.15"/>
+    <path d="M215 700 Q205 660 220 630 Q235 615 260 615 L260 640 Q245 655 245 680 Q245 700 260 705 Z" fill="#5F5E5A" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M385 700 Q395 660 380 630 Q365 615 340 615 L340 640 Q355 655 355 680 Q355 700 340 705 Z" fill="#5F5E5A" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M225 615 Q210 560 225 520 Q235 495 260 480 L260 500 Q245 515 240 540 Q235 570 245 605 Q250 615 260 618 Z" fill="#5F5E5A" opacity="0.38" stroke="#444441" stroke-width="1"/>
+    <path d="M375 615 Q390 560 375 520 Q365 495 340 480 L340 500 Q355 515 360 540 Q365 570 355 605 Q350 615 340 618 Z" fill="#5F5E5A" opacity="0.38" stroke="#444441" stroke-width="1"/>
+    <path d="M245 630 Q225 590 235 550 L250 500 Q235 480 238 460 Q255 452 300 450 Q345 452 362 460 Q365 480 350 500 L365 550 Q375 590 355 630 Q300 650 245 630 Z" fill="#6B6A65" opacity="0.4" stroke="#444441" stroke-width="1"/>
+    <path d="M258 460 Q248 400 262 355 Q275 330 300 322 Q325 330 338 355 Q352 400 342 460 Q321 470 300 471 Q279 470 258 460 Z" fill="#888780" opacity="0.32" stroke="#5F5E5A" stroke-width="1"/>
+    <circle cx="300" cy="278" r="42" fill="#B4B2A9" opacity="0.4" stroke="#5F5E5A" stroke-width="1"/>
+    <path d="M262 265 Q262 224 300 218 Q338 224 338 265 Q338 238 300 232 Q262 238 262 265 Z" fill="#2C2C2A" opacity="0.55"/>
+    <ellipse cx="286" cy="280" rx="3" ry="4" fill="#2C2C2A" opacity="0.4"/>
+    <ellipse cx="314" cy="280" rx="3" ry="4" fill="#2C2C2A" opacity="0.4"/>
+    <path d="M292 300 Q300 305 308 300" stroke="#5F5E5A" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M270 246 Q286 240 298 244" stroke="#2C2C2A" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M330 246 Q314 240 302 244" stroke="#2C2C2A" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+  </g>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="720" height="940" fill="#0d0d0d"/>
+
+
+<!-- ================= SCENE 4: DEEP TRANCE BLURRED ATMOSPHERE ================= -->
+<!-- Envelops the entire figure in a hazy, silent blue capsule (18s - 24s) -->
+<g filter="url(#heavyGlow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0.8; 0.8; 0" keyTimes="0; 0.74; 0.76; 0.97; 1" dur="24s" repeatCount="indefinite" />
+  <circle cx="300" cy="380" r="160" fill="url(#tranceAura)" />
+</g>
+
+
+<!-- ================= SCENE 2: LADDER DESCENT RUNGS ================= -->
+<!-- Horizontal rungs translating upwards, simulating downward movement (6s - 12s) -->
+<g opacity="0" filter="url(#glow)">
+  <animate attributeName="opacity" values="0; 0; 0.85; 0.85; 0; 0" keyTimes="0; 0.23; 0.25; 0.48; 0.50; 1" dur="24s" repeatCount="indefinite" />
+  
+  <g>
+    <!-- Rungs translating upwards -->
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-80" dur="1.8s" repeatCount="indefinite" />
+    <line x1="260" y1="280" x2="340" y2="280" stroke="#00E5FF" stroke-width="2.5" />
+    <line x1="260" y1="360" x2="340" y2="360" stroke="#00E5FF" stroke-width="2.5" />
+    <line x1="260" y1="440" x2="340" y2="440" stroke="#00E5FF" stroke-width="2.5" />
+    <line x1="260" y1="520" x2="340" y2="520" stroke="#00E5FF" stroke-width="2.5" />
+    <line x1="260" y1="600" x2="340" y2="600" stroke="#00E5FF" stroke-width="2.5" />
+  </g>
+</g>
+
+
+<!-- ================= SCENE 3: FALLING BACKWARDS CASCADE ================= -->
+<!-- Soft downward drifting particles during the release phase (12s - 18s) -->
+<g fill="#2979FF" opacity="0" filter="url(#glow)">
+  <animate attributeName="opacity" values="0; 0; 0.85; 0.85; 0; 0" keyTimes="0; 0.49; 0.51; 0.73; 0.75; 1" dur="24s" repeatCount="indefinite" />
+  <circle cx="280" cy="200" r="3"><animate attributeName="cy" values="200; 550" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="330" cy="220" r="4"><animate attributeName="cy" values="220; 580" dur="1.5s" repeatCount="indefinite"/></circle>
+  <circle cx="250" cy="300" r="2.5"><animate attributeName="cy" values="300; 600" dur="2.5s" repeatCount="indefinite"/></circle>
+  <circle cx="360" cy="280" r="3.5"><animate attributeName="cy" values="280; 620" dur="1.8s" repeatCount="indefinite"/></circle>
+</g>
+
+
+<!-- ================= THE MEDITATING FIGURE (Laying / Moving Back) ================= -->
+<!-- Translates slightly down and scales back during Phase 3 to show release/heaviness -->
+<g id="figure-group">
+  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,0; 0,20; 0,20; 0,0"
+                    keyTimes="0; 0.49; 0.53; 0.85; 1"
+                    dur="24s" repeatCount="indefinite" />
+  <animateTransform attributeName="transform" type="scale" additive="sum"
+                    values="1; 1; 0.95; 0.95; 1"
+                    keyTimes="0; 0.49; 0.53; 0.85; 1"
+                    dur="24s" repeatCount="indefinite" />
+  <use href="#meditating-figure" />
+</g>
+
+
+<!-- ================= DYNAMIC BRAINWAVE HEMISPHERE GRAPHS ================= -->
+<!-- Displayed in the head region (X=300, Y=265) -->
+<!-- Left Hemisphere (Active Beta - Red/Orange) -->
+<g opacity="1" stroke="#FF1744" stroke-width="1.5" fill="none">
+  <!-- Fades out completely during Phase 2 (Descent) -->
+  <animate attributeName="opacity" values="0.85; 0.85; 0; 0; 0.85" keyTimes="0; 0.25; 0.45; 0.85; 1" dur="24s" repeatCount="indefinite" />
+  <!-- Rapid jagged Beta Waves -->
+  <path d="M 265 270 L 270 262 L 275 275 L 280 258 L 285 278 L 290 264 L 295 270" filter="url(#glow)">
+    <animate attributeName="d" 
+             values="M 265 270 L 270 262 L 275 275 L 280 258 L 285 278 L 290 264 L 295 270;
+                     M 265 268 L 270 274 L 275 260 L 280 279 L 285 259 L 290 276 L 295 268;
+                     M 265 270 L 270 262 L 275 275 L 280 258 L 285 278 L 290 264 L 295 270" 
+             dur="0.12s" repeatCount="indefinite"/>
+  </path>
+</g>
+
+<!-- Right Hemisphere (Passive Alpha/Theta - Blue/Indigo) -->
+<g opacity="0.1" stroke="#00E5FF" stroke-width="1.5" fill="none">
+  <!-- Fades in to maximum during Phase 2 and remains dominant -->
+  <animate attributeName="opacity" values="0.1; 0.1; 0.95; 0.95; 0.1" keyTimes="0; 0.25; 0.45; 0.85; 1" dur="24s" repeatCount="indefinite" />
+  <!-- Slow undulating Alpha Sine Waves -->
+  <path d="M 305 268 Q 315 250 325 268 T 345 268" filter="url(#glow)">
+    <animate attributeName="d" 
+             values="M 305 268 Q 315 250 325 268 T 345 268;
+                     M 305 268 Q 315 285 325 268 T 345 268;
+                     M 305 268 Q 315 250 325 268 T 345 268" 
+             dur="2s" repeatCount="indefinite"/>
+  </path>
+</g>
+
+
+<!-- ================= PHASE 1: GUIDED BREATHING RING ================ -->
+<!-- Fits 6-6-6-6 cycle (Inhale, Hold, Exhale, Rest) -->
+<circle cx="300" cy="450" r="12" fill="none" stroke-linecap="round" stroke-width="4" opacity="0" filter="url(#glow)">
+  <animate attributeName="opacity" values="0.85; 0.85; 0.85; 0.85; 0; 0" keyTimes="0; 0.25; 0.50; 0.75; 0.77; 1" dur="24s" repeatCount="indefinite"/>
+  <animate attributeName="r" values="12; 85; 85; 85; 12; 12" keyTimes="0; 0.25; 0.50; 0.75; 0.90; 1" dur="24s" repeatCount="indefinite"/>
+  <animate attributeName="stroke" values="#00E5FF; #00E5FF; #FFD54F; #FF9100; #FF1744; #00E5FF" keyTimes="0; 0.25; 0.50; 0.75; 0.90; 1" dur="24s" repeatCount="indefinite"/>
+</circle>
+
+
+<!-- ================================================================= -->
+<!-- ================ LABELS & DOTTED POINTERS (Right) ================ -->
+<!-- ================================================================= -->
+<g stroke="#444" stroke-width="1" stroke-dasharray="3 3">
+  <!-- Left active brain Line -->
+  <line x1="280" y1="265" x2="505" y2="180" />
+  <!-- Right passive brain Line -->
+  <line x1="325" y1="265" x2="505" y2="280" />
+  <!-- Ladder Descent Line -->
+  <line x1="260" y1="440" x2="505" y2="445" />
+</g>
+
+<!-- Labeled Texts -->
+<g font-family="sans-serif" font-size="11" fill="#cccccc" font-weight="bold">
+  <!-- Left Brain Label -->
+  <text x="510" y="184" fill="#FF1744">Left Active Brain (Beta)</text>
+  <text x="510" y="199" font-weight="normal" fill="#888">Analytical state; completely turns off in trance</text>
+
+  <!-- Right Brain Label -->
+  <text x="510" y="284" fill="#00E5FF">Right Passive Brain (Alpha/Theta)</text>
+  <text x="510" y="299" font-weight="normal" fill="#888">Subconscious seat; activated during descent</text>
+
+  <!-- Descent Label -->
+  <text x="510" y="449" fill="#FFFFFF">Downward Staircase Descent</text>
+  <text x="510" y="464" font-weight="normal" fill="#888">Syncing step-downs on exhales slows brain waves</text>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ==================== MEDITATION GUIDE PANEL ===================== -->
+<!-- ================================================================= -->
+<g transform="translate(0, 0)">
+  <!-- Panel Glass Frame -->
+  <rect x="30" y="770" width="660" height="145" rx="14" fill="#111116" stroke="#2c2c35" stroke-width="1.5" />
+  
+  <!-- PHASE 1 TEXTS (0s - 6s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="1; 1; 0; 0; 0" keyTimes="0; 0.23; 0.25; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#00E5FF" text-anchor="middle" filter="url(#glow)">
+      PHASE 1: CALIBRATE THE NERVOUS SYSTEM (6-6-6 BREATH)
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Inhale 6s (expand circle), hold 6s, and exhale 6s. Sit comfortably. Do not lay down.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFFFFF" font-weight="bold" text-anchor="middle">
+      "Allow the breath to soothe your physical vessel until body sensation dissolves."
+    </text>
+  </g>
+
+  <!-- PHASE 2 TEXTS (6s - 12s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.23; 0.25; 0.48; 0.50; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#00E5FF" text-anchor="middle" filter="url(#glow)">
+      PHASE 2: DESCEND THE LADDER IN THE DARK
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Feel yourself taking steps down. Exhale = step down 1 or 2 rungs. Inhale = stay still.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFF59D" font-weight="bold" text-anchor="middle">
+      "Watch the left-brain active beta waves quiet down as alpha waves begin to take over."
+    </text>
+  </g>
+
+  <!-- PHASE 3 TEXTS (12s - 18s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.48; 0.50; 0.73; 0.75; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2979FF" text-anchor="middle" filter="url(#glow)">
+      PHASE 3: LET GO AND FALL BACKWARD
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Leave the ladder and let yourself fall backward. Trust the drop.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#00E5FF" font-weight="bold" text-anchor="middle">
+      "If dizzy, briefly focus on the front of your body to immediately stop the fall."
+    </text>
+  </g>
+
+  <!-- PHASE 4 TEXTS (18s - 24s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.73; 0.75; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#AEEA00" text-anchor="middle" filter="url(#glow)">
+      PHASE 4: ENTER DEEP SUB-CONSCIOUS ALPHA PORTAL
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Stop the fall when a deep heaviness sets in. Welcome the spacious, buzzing silence.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#AEEA00" font-weight="bold" text-anchor="middle">
+      "To exit: focus on moving your toes/fingers, fletcher hands, and slowly revive the body."
+    </text>
+  </g>
+</g>
+
+<!-- Side notes -->
+<text x="40" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="40" dy="0" fill="#FF1744" font-weight="bold">Brain Wave Shift:</tspan>
+  <tspan x="40" dy="18">Descent imagery shifts</tspan>
+  <tspan x="40" dy="18">your brain frequencies</tspan>
+  <tspan x="40" dy="18">from Beta to Alpha/Theta.</tspan>
+</text>
+
+<text x="480" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="480" dy="0" fill="#FFF59D" font-weight="bold">Waking Safety:</tspan>
+  <tspan x="480" dy="18">Do not rush to stand.</tspan>
+  <tspan x="480" dy="18">Move fingers/toes first</tspan>
+  <tspan x="480" dy="18">to ground yourself slowly.</tspan>
+</text>
+
+</svg>
+</body>
+</html>

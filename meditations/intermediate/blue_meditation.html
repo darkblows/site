@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADu0lEQVR42q1Ta09UVxSdmv6DNk36C2o/YRtqo31ZwNoHbSkJjU3TNJZPTRttYlPTxoiJ9gEaFDUF5srUuVNmNAqMyCg+MmgwMANEghiMMuCAZCAg3sfcx1xey33OZR4YGY2Zk6zMPnuvs9acffdxPOsCsAY9UinC0lcsduR6ISy3YCjux+14M8XNOTeo6MCL2h3joXlXV1icc4OPG63WEl8CXxI+oTin4h+J8VcKPRa2nUpwsJjlcmbwzzktj4n2dajoJbCY5XJmMD9s/l52ykKZz8bXFM8PG7ueY1LUlwC8kJlje4wYo9d6TBQ3WfjstIVOiikXSXEz+X3qy9lGsZIwgLBUksoNGxtIDEuEHWM6dkxoTNzGqLE+fVbZgpAcpvPCqgZEOEgELCNIRnmLUaMqNmRACCZQFjRR1mHymHLMpBK96mvEa8s415DFQNmTQcSVK9pCqc9aZB+VYXOjjqL/TST3JV5jodavzDFuGkr16gY9yvZM8jcn+UimcGj4IA5HqlbkCo7LeMygIouBVJokWiEZRSTwoZg2+S3kx66epuSe1951KkiEpLRBSPludYM+dW2SON6pcJH8Opn9Pgm8tkFQMXI1w6A7/vpKUTG2G+LkCMeB0VlclxYYsTeocpH3G5SU4OV+AZduHLf/vdtEkUvGRpeGtvPL4l3SEqpGddJ6aGNqnwOemVdpoxKAmijQMsXJrRc1LrQ/oIEeGY+7B4+g99YhFHiobQ0y/qbae/8ZONys2AbnpoHqe2Ba3MAbs98EbXbypHMCOBblZCGgc9FAV4KPZWZr3mnQsKdVRRvVNtFNfvEtt6h+DKi7bxt4Jn9Mt6kCayh5lQBqE9TADLafscdxsN9EMGzHQvt+ONv/wnqnikBnnGp2/lOXBLl9BqgcSYqff/yV81YtilPjra5ZlLoNfvBbGlNrSMfFkC0UCeVhLLwWbwsqWq6pVNOIY99iS72EA3XTII0Ib01yUT9/psMxGsm9X4iJCMXYSge8ZKR2KcDNOP68YLfo88YZBt73H07KvKZ2K/CemMXWEwbPb3QqUwVucy/TLBQTPzk2N86to80EYalcNHSfR8KA+ADXj03irHsW+/xGqvcVNYP44+gQjzeR2O4mDX4PcY/EMOB+AK8oYZvH0JgW02Ta/BaF4lw5JQwCsmH816OY3lmdlUOPb+HNWnn+LUGpSbWJCjcJeBrKnRMMT+Xl18t4o1ZSVn6H7DfQi0Uz+r1L72coFhNRlnsS9wPRtNb9K83lC3K9w+FwPAIIUIRh19D9kQAAAABJRU5ErkJggg==" />
+<meta charset="UTF-8">
+<title>Blue Light Meditation — Floating State</title>
+</head>
+<body style="margin:0;padding:24px;background:#0d0d0d;display:flex;justify-content:center;font-family:sans-serif;">
+
+<svg width="720" height="940" viewBox="0 0 720 940" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Blue Light Meditation — Floating Astral State &amp; Transcendence Portal</title>
+<desc>A 24-second advanced animation. The solid silhouette dissolves into a starry constellation profile, levitates off its ground shadow, and is engulfed in electric blue light as a dimensional portal opens above.</desc>
+
+<defs>
+  <!-- Glow Filters -->
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="6" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  
+  <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="15" result="blur" />
+    <feComponentTransfer in="blur" result="glow">
+      <feFuncA type="linear" slope="1.8"/>
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Deep Blue / Spiritual Gradients -->
+  <radialGradient id="spiritualBlue" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8"/>
+    <stop offset="40%" stop-color="#2979FF" stop-opacity="0.4"/>
+    <stop offset="100%" stop-color="#1A237E" stop-opacity="0"/>
+  </radialGradient>
+
+  <radialGradient id="portalGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+    <stop offset="25%" stop-color="#00E5FF" stop-opacity="0.8"/>
+    <stop offset="70%" stop-color="#2979FF" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#1A237E" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Base Meditating Silhouette Components -->
+  <g id="meditating-figure-paths">
+    <path d="M215 700 Q205 660 220 630 Q235 615 260 615 L260 640 Q245 655 245 680 Q245 700 260 705 Z" />
+    <path d="M385 700 Q395 660 380 630 Q365 615 340 615 L340 640 Q355 655 355 680 Q355 700 340 705 Z" />
+    <path d="M225 615 Q210 560 225 520 Q235 495 260 480 L260 500 Q245 515 240 540 Q235 570 245 605 Q250 615 260 618 Z" />
+    <path d="M375 615 Q390 560 375 520 Q365 495 340 480 L340 500 Q355 515 360 540 Q365 570 355 605 Q350 615 340 618 Z" />
+    <path d="M245 630 Q225 590 235 550 L250 500 Q235 480 238 460 Q255 452 300 450 Q345 452 362 460 Q365 480 350 500 L365 550 Q375 590 355 630 Q300 650 245 630 Z" />
+    <path d="M258 460 Q248 400 262 355 Q275 330 300 322 Q325 330 338 355 Q352 400 342 460 Q321 470 300 471 Q279 470 258 460 Z" />
+    <circle cx="300" cy="278" r="42" />
+    <path d="M262 265 Q262 224 300 218 Q338 224 338 265 Q338 238 300 232 Q262 238 262 265 Z" />
+  </g>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="720" height="940" fill="#0d0d0d"/>
+
+
+<!-- ================= SCENE: STARGATE / PORTAL (Top of Screen) ================= -->
+<!-- Gradually opens and rotates as the meditation goes into Phase 4 -->
+<g transform="translate(300, 120)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0.2; 0.9; 0.9; 0" keyTimes="0; 0.25; 0.50; 0.75; 0.95; 1" dur="24s" repeatCount="indefinite" />
+  
+  <!-- Glowing Portal Core -->
+  <ellipse cx="0" cy="0" rx="80" ry="25" fill="url(#portalGrad)" filter="url(#heavyGlow)"/>
+  
+  <!-- Swirling Portal Ring 1 -->
+  <ellipse cx="0" cy="0" rx="90" ry="28" fill="none" stroke="#00E5FF" stroke-width="2" stroke-dasharray="10 20" filter="url(#glow)">
+    <animateTransform attributeName="transform" type="rotate" values="0; 360" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Swirling Portal Ring 2 -->
+  <ellipse cx="0" cy="0" rx="110" ry="34" fill="none" stroke="#2979FF" stroke-width="1" stroke-dasharray="25 40" stroke-opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" values="360; 0" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+</g>
+
+
+<!-- ================= STATIC GROUND PHYSICAL ANCHOR ================= -->
+<!-- The physical anchor stays below while the astral body levitates -->
+<ellipse cx="300" cy="720" rx="115" ry="13" fill="#00E5FF" opacity="0.1">
+  <animate attributeName="opacity" values="0.1; 0.1; 0.2; 0.2; 0.1" keyTimes="0; 0.25; 0.50; 0.85; 1" dur="24s" repeatCount="indefinite"/>
+  <animate attributeName="rx" values="115; 115; 90; 90; 115" keyTimes="0; 0.25; 0.50; 0.85; 1" dur="24s" repeatCount="indefinite"/>
+</ellipse>
+
+
+<!-- ================= THE LEVITATING & DISSOLVING BODY ================= -->
+<!-- This entire group floats upwards starting at Phase 2 -->
+<g id="floating-astral-body">
+  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,0; 0,-28; 0,-28; 0,-15; 0,0"
+                    keyTimes="0; 0.25; 0.50; 0.75; 0.90; 1"
+                    dur="24s" repeatCount="indefinite" />
+
+  <!-- Inner Cocoon Aura (Moving with the body) -->
+  <circle cx="300" cy="450" r="150" fill="url(#spiritualBlue)" opacity="0">
+    <animate attributeName="opacity" values="0; 0.8; 0.8; 0.8; 0" keyTimes="0; 0.05; 0.50; 0.85; 1" dur="24s" repeatCount="indefinite" />
+    <animate attributeName="r" values="130; 165; 130" dur="3s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- STATE A: Solid physical body (Dissolves as trance deepens) -->
+  <g id="solid-body" fill="#222" opacity="1">
+    <animate attributeName="opacity" values="1; 1; 0.25; 0.15; 0.25; 1" keyTimes="0; 0.25; 0.50; 0.75; 0.90; 1" dur="24s" repeatCount="indefinite" />
+    <use href="#meditating-figure-paths" />
+  </g>
+
+  <!-- STATE B: Astral Star Constellation Body (Ignites as physical awareness fades) -->
+  <g id="astral-star-body" fill="none" stroke="#00E5FF" stroke-width="1.5" stroke-dasharray="2 6" filter="url(#glow)" opacity="0">
+    <animate attributeName="opacity" values="0; 0; 0.85; 0.95; 0.50; 0" keyTimes="0; 0.25; 0.50; 0.75; 0.90; 1" dur="24s" repeatCount="indefinite" />
+    <use href="#meditating-figure-paths" />
+  </g>
+
+  <!-- Glowing Third Eye and Heart Centers inside the floating figure -->
+  <circle cx="300" cy="278" r="4" fill="#FFFFFF" filter="url(#glow)" opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.25; 0.40; 0.85; 1" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="450" r="6" fill="#00E5FF" filter="url(#heavyGlow)" opacity="0">
+    <animate attributeName="opacity" values="0; 0; 0.9; 0.9; 0" keyTimes="0; 0.25; 0.40; 0.85; 1" dur="24s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4; 10; 4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Rising particles escaping into higher dimensions (Phase 3 & 4) -->
+  <g fill="#00E5FF" opacity="0" filter="url(#glow)">
+    <animate attributeName="opacity" values="0; 0; 0; 0.8; 0.8; 0" keyTimes="0; 0.25; 0.50; 0.60; 0.85; 1" dur="24s" repeatCount="indefinite" />
+    
+    <!-- Moving upward circles -->
+    <circle cx="280" cy="400" r="3"><animate attributeName="cy" values="400; 150" dur="2s" repeatCount="indefinite"/><animate attributeName="cx" values="280; 250; 280" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="320" cy="350" r="2.5"><animate attributeName="cy" values="350; 120" dur="1.8s" repeatCount="indefinite"/><animate attributeName="cx" values="320; 340; 300" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="250" r="4"><animate attributeName="cy" values="250; 80" dur="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="300" r="2"><animate attributeName="cy" values="300; 100" dur="2.2s" repeatCount="indefinite"/></circle>
+  </g>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ================ LABELS & DOTTED POINTERS (Right) ================ -->
+<!-- ================================================================= -->
+<g stroke="#333" stroke-width="1" stroke-dasharray="3 3">
+  <!-- Dimension Portal Line -->
+  <line x1="330" y1="120" x2="505" y2="125" />
+  <!-- Hovering Center Line -->
+  <line x1="320" y1="420" x2="505" y2="425" />
+  <!-- Demonic Aura Line -->
+  <line x1="365" y1="520" x2="505" y2="525" />
+  <!-- Ground Line -->
+  <line x1="385" y1="720" x2="505" y2="725" />
+</g>
+
+<!-- Labeled Texts -->
+<g font-family="sans-serif" font-size="11" fill="#cccccc" font-weight="bold">
+  <!-- Portal Label -->
+  <text x="510" y="124" fill="#00E5FF" filter="url(#glow)">Transcendence Portal</text>
+  <text x="510" y="139" font-weight="normal" fill="#888">Ascending to higher astral realms</text>
+
+  <!-- Hovering Label -->
+  <text x="510" y="424" fill="#FFFFFF">Weightlessness State</text>
+  <text x="510" y="439" font-weight="normal" fill="#888">Body drifts as sensory awareness fades</text>
+
+  <!-- Demonic Aura Label -->
+  <text x="510" y="524" fill="#2979FF">Demonic/Spiritual Aura</text>
+  <text x="510" y="539" font-weight="normal" fill="#888">Surrounding yourself with blue energy</text>
+
+  <!-- Ground Label -->
+  <text x="510" y="724">Physical Anchor Release</text>
+  <text x="510" y="739" font-weight="normal" fill="#888">Lifting off the ground shadow in trance</text>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ==================== MEDITATION GUIDE PANEL ===================== -->
+<!-- ================================================================= -->
+<g transform="translate(0, 0)">
+  <!-- Panel Glass Frame -->
+  <rect x="30" y="770" width="660" height="145" rx="14" fill="#111116" stroke="#2c2c35" stroke-width="1.5" />
+  
+  <!-- PHASE 1 TEXTS (0s - 6s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="1; 1; 0; 0; 0" keyTimes="0; 0.23; 0.25; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2979FF" text-anchor="middle" filter="url(#glow)">
+      PHASE 1: INHALE SPIRITUAL BLUE LIGHT
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Close your eyes and enter a deep state of relaxation.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFFFFF" font-weight="bold" text-anchor="middle">
+      "Breathe in the deep cobalt-blue frequency of the spiritual plane."
+    </text>
+  </g>
+
+  <!-- PHASE 2 TEXTS (6s - 12s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.24; 0.26; 0.48; 0.50; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#00E5FF" text-anchor="middle" filter="url(#glow)">
+      PHASE 2: DISSOLVE PHYSICAL AWARENESS
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Relax until you can no longer feel your physical shell (deep trance state).
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFF59D" font-weight="bold" text-anchor="middle">
+      "Your solid body fades into stardust. Feel your weightlessness."
+    </text>
+  </g>
+
+  <!-- PHASE 3 TEXTS (12s - 18s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.49; 0.51; 0.73; 0.75; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle" filter="url(#glow)">
+      PHASE 3: HOVER AND LET GO COMPLETELY
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Tune entirely into the sensation of floating and letting go.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#00E5FF" font-weight="bold" text-anchor="middle">
+      "The electric blue light supports you, lifting your astral self off the ground."
+    </text>
+  </g>
+
+  <!-- PHASE 4 TEXTS (18s - 24s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.74; 0.76; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#AEEA00" text-anchor="middle" filter="url(#glow)">
+      PHASE 4: TRANSCEND TO HIGHER DIMENSIONS
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      As the dimensional stargate opens, allow your energy to drift upward.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#AEEA00" font-weight="bold" text-anchor="middle">
+      "Let the spiritual current guide your consciousness into higher astral realms."
+    </text>
+  </g>
+</g>
+
+<!-- Side notes -->
+<text x="40" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="40" dy="0" fill="#2979FF" font-weight="bold">Spiritual Light:</tspan>
+  <tspan x="40" dy="18">The natural frequency of</tspan>
+  <tspan x="40" dy="18">demonic/spiritual energy</tspan>
+  <tspan x="40" dy="18">is electric blue.</tspan>
+</text>
+
+<text x="495" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="495" dy="0" fill="#00E5FF" font-weight="bold"> Astral Levitation:</tspan>
+  <tspan x="495" dy="18">Note how the energy nodes</tspan>
+  <tspan x="495" dy="18">physically lift above the</tspan>
+  <tspan x="495" dy="18">dotted guidelines.</tspan>
+</text>
+
+</svg>
+</body>
+</html>

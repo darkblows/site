@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADu0lEQVR42q1Ta09UVxSdmv6DNk36C2o/YRtqo31ZwNoHbSkJjU3TNJZPTRttYlPTxoiJ9gEaFDUF5srUuVNmNAqMyCg+MmgwMANEghiMMuCAZCAg3sfcx1xey33OZR4YGY2Zk6zMPnuvs9acffdxPOsCsAY9UinC0lcsduR6ISy3YCjux+14M8XNOTeo6MCL2h3joXlXV1icc4OPG63WEl8CXxI+oTin4h+J8VcKPRa2nUpwsJjlcmbwzzktj4n2dajoJbCY5XJmMD9s/l52ykKZz8bXFM8PG7ueY1LUlwC8kJlje4wYo9d6TBQ3WfjstIVOiikXSXEz+X3qy9lGsZIwgLBUksoNGxtIDEuEHWM6dkxoTNzGqLE+fVbZgpAcpvPCqgZEOEgELCNIRnmLUaMqNmRACCZQFjRR1mHymHLMpBK96mvEa8s415DFQNmTQcSVK9pCqc9aZB+VYXOjjqL/TST3JV5jodavzDFuGkr16gY9yvZM8jcn+UimcGj4IA5HqlbkCo7LeMygIouBVJokWiEZRSTwoZg2+S3kx66epuSe1951KkiEpLRBSPludYM+dW2SON6pcJH8Opn9Pgm8tkFQMXI1w6A7/vpKUTG2G+LkCMeB0VlclxYYsTeocpH3G5SU4OV+AZduHLf/vdtEkUvGRpeGtvPL4l3SEqpGddJ6aGNqnwOemVdpoxKAmijQMsXJrRc1LrQ/oIEeGY+7B4+g99YhFHiobQ0y/qbae/8ZONys2AbnpoHqe2Ba3MAbs98EbXbypHMCOBblZCGgc9FAV4KPZWZr3mnQsKdVRRvVNtFNfvEtt6h+DKi7bxt4Jn9Mt6kCayh5lQBqE9TADLafscdxsN9EMGzHQvt+ONv/wnqnikBnnGp2/lOXBLl9BqgcSYqff/yV81YtilPjra5ZlLoNfvBbGlNrSMfFkC0UCeVhLLwWbwsqWq6pVNOIY99iS72EA3XTII0Ib01yUT9/psMxGsm9X4iJCMXYSge8ZKR2KcDNOP68YLfo88YZBt73H07KvKZ2K/CemMXWEwbPb3QqUwVucy/TLBQTPzk2N86to80EYalcNHSfR8KA+ADXj03irHsW+/xGqvcVNYP44+gQjzeR2O4mDX4PcY/EMOB+AK8oYZvH0JgW02Ta/BaF4lw5JQwCsmH816OY3lmdlUOPb+HNWnn+LUGpSbWJCjcJeBrKnRMMT+Xl18t4o1ZSVn6H7DfQi0Uz+r1L72coFhNRlnsS9wPRtNb9K83lC3K9w+FwPAIIUIRh19D9kQAAAABJRU5ErkJggg==" />
+<meta charset="UTF-8">
+<title>Astral Projection — Limb Separation (Meditation 2)</title>
+</head>
+<body style="margin:0;padding:24px;background:#0d0d0d;display:flex;justify-content:center;font-family:sans-serif;">
+
+<svg width="720" height="940" viewBox="0 0 720 940" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Astral Projection — Gradual Limb Separation Technique</title>
+<desc>A 24-second animation. Demonstrates supine body trance state, lifting of the left astral arm, moving the right astral arm to touch the face, merging both astral hands, raising the legs, and floating the entire astral body.</desc>
+
+<defs>
+  <!-- Glow Filters -->
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="5" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <filter id="heavyGlow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="12" result="blur" />
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Aura Gradient for Unified Float -->
+  <radialGradient id="floatAura" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.6"/>
+    <stop offset="60%" stop-color="#2979FF" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Reusable Physical Supine Figure Components -->
+  <g id="supine-body-paths">
+    <!-- Legs -->
+    <path d="M 270 550 L 260 760 Q 250 780 260 790 L 285 790 L 290 550 Z" />
+    <path d="M 330 550 L 340 760 Q 350 780 340 790 L 315 790 L 310 550 Z" />
+    <!-- Hips and Torso -->
+    <path d="M 255 380 L 345 380 Q 355 450 345 550 L 255 550 Q 245 450 255 380 Z" />
+    <!-- Chest / Shoulders -->
+    <path d="M 235 300 Q 300 290 365 300 L 355 380 L 245 380 Z" />
+    <!-- Neck -->
+    <rect x="285" y="260" width="30" height="40" rx="5" />
+    <!-- Head -->
+    <circle cx="300" cy="225" r="40" />
+  </g>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="720" height="940" fill="#0d0d0d"/>
+
+
+<!-- ================= STATIC PHYSICAL BODY (Dark Slate Anchor) ================= -->
+<g fill="#2d2d32" opacity="0.35">
+  <use href="#supine-body-paths" />
+  <!-- Left Arm (Static Physical) -->
+  <path d="M 235 300 Q 200 370 215 500 Q 220 520 210 540 L 230 540 L 245 380 Z" />
+  <!-- Right Arm (Static Physical) -->
+  <path d="M 365 300 Q 400 370 385 500 Q 380 520 390 540 L 370 540 L 355 380 Z" />
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ============= SCENE ANIMATION: INDIVIDUAL ASTRAL PARTS ============ -->
+<!-- ================================================================= -->
+
+<!-- 1. LEFT ASTRAL ARM (Cyan Energy) -->
+<!-- Separates and floats out (4s-8s), then moves to chest center (12s-16s) -->
+<path d="M 235 300 Q 200 370 215 500 Q 220 520 210 540 L 230 540 L 245 380 Z" 
+      fill="none" stroke="#00E5FF" stroke-width="3" filter="url(#glow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0.85; 0.85; 0.85; 0; 0" keyTimes="0; 0.16; 0.18; 0.79; 0.81; 0.83; 1" dur="24s" repeatCount="indefinite" />
+  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,0; -45,-30; -45,-30; 45,-120; 45,-120; 0,0"
+                    keyTimes="0; 0.166; 0.333; 0.500; 0.666; 0.791; 1"
+                    dur="24s" repeatCount="indefinite" />
+</path>
+
+<!-- 2. RIGHT ASTRAL ARM (Amber/Orange Energy) -->
+<!-- Separates (8s-12s) and touches face/throat region -->
+<path d="M 365 300 Q 400 370 385 500 Q 380 520 390 540 L 370 540 L 355 380 Z" 
+      fill="none" stroke="#FF9100" stroke-width="3" filter="url(#glow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0.85; 0.85; 0.85; 0; 0" keyTimes="0; 0.31; 0.33; 0.79; 0.81; 0.83; 1" dur="24s" repeatCount="indefinite" />
+  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,0; -55,-130; -55,-130; -85,-120; -85,-120; 0,0"
+                    keyTimes="0; 0.333; 0.500; 0.666; 0.708; 0.791; 1"
+                    dur="24s" repeatCount="indefinite" />
+</g>
+
+<!-- 3. ASTRAL LEGS (Rising together during 16s - 20s) -->
+<g fill="none" stroke="#00E5FF" stroke-width="2" opacity="0" filter="url(#glow)">
+  <animate attributeName="opacity" values="0; 0; 0.8; 0; 0" keyTimes="0; 0.65; 0.68; 0.80; 1" dur="24s" repeatCount="indefinite"/>
+  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,0; 0,-30; 0,-30; 0,0"
+                    keyTimes="0; 0.666; 0.791; 0.812; 1"
+                    dur="24s" repeatCount="indefinite" />
+  <!-- Left Leg -->
+  <path d="M 270 550 L 260 760 Q 250 780 260 790 L 285 790 L 290 550 Z" />
+  <!-- Right Leg -->
+  <path d="M 330 550 L 340 760 Q 350 780 340 790 L 315 790 L 310 550 Z" />
+</g>
+
+
+<!-- 4. HANDS UNION SPARK (Sparking when both hands meet on chest Y=360, X=300) -->
+<circle cx="300" cy="350" r="10" fill="url(#floatAura)" filter="url(#heavyGlow)" opacity="0">
+  <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.49; 0.51; 0.79; 0.81; 1" dur="24s" repeatCount="indefinite" />
+  <animate attributeName="r" values="10; 45; 20; 55; 10" dur="1.5s" repeatCount="indefinite" />
+</circle>
+
+
+<!-- ================================================================= -->
+<!-- ============= PHASE 6: FULL UNIFIED ASTRAL FLOATING =============== -->
+<!-- ================================================================= -->
+<!-- Replaces the individual limbs as they fade out; whole body floats -->
+<g opacity="0">
+  <animate attributeName="opacity" values="0; 0; 0.9; 0.9; 0" keyTimes="0; 0.80; 0.83; 0.96; 1" dur="24s" repeatCount="indefinite" />
+  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,0; 0,-50; 0,-60; 0,0"
+                    keyTimes="0; 0.80; 0.84; 0.95; 1"
+                    dur="24s" repeatCount="indefinite" />
+
+  <!-- Soft Portal Background Glow -->
+  <circle cx="300" cy="450" r="180" fill="url(#floatAura)" filter="url(#heavyGlow)" opacity="0.8"/>
+  
+  <!-- Outer Body Glow Line -->
+  <use href="#supine-body-paths" fill="none" stroke="#00E5FF" stroke-width="2.5" filter="url(#glow)"/>
+  
+  <!-- Astral Arm Left -->
+  <path d="M 235 300 Q 200 370 215 500 Q 220 520 210 540 L 230 540 L 245 380 Z" fill="none" stroke="#00E5FF" stroke-width="2.5" filter="url(#glow)" />
+  <!-- Astral Arm Right -->
+  <path d="M 365 300 Q 400 370 385 500 Q 380 520 390 540 L 370 540 L 355 380 Z" fill="none" stroke="#00E5FF" stroke-width="2.5" filter="url(#glow)" />
+
+  <!-- Stars inside Astral Body -->
+  <circle cx="300" cy="225" r="3" fill="#FFF" filter="url(#glow)" />
+  <circle cx="300" cy="380" r="4" fill="#FFF" filter="url(#glow)" />
+  <circle cx="300" cy="500" r="3" fill="#00E5FF" filter="url(#glow)" />
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ================ LABELS & DOTTED POINTERS (Right) ================ -->
+<!-- ================================================================= -->
+<g stroke="#444" stroke-width="1" stroke-dasharray="3 3">
+  <!-- Facial Touch Line -->
+  <line x1="300" y1="225" x2="505" y2="230" />
+  <!-- Left Arm Split Line -->
+  <line x1="170" y1="460" x2="505" y2="465" />
+  <!-- Union point Line -->
+  <line x1="300" y1="350" x2="505" y2="355" />
+</g>
+
+<!-- Labeled Texts -->
+<g font-family="sans-serif" font-size="11" fill="#cccccc" font-weight="bold">
+  <!-- Face Touch Label -->
+  <text x="510" y="234" fill="#FF9100">Mind Touch Point</text>
+  <text x="510" y="249" font-weight="normal" fill="#888">Right arm touches face to anchor focus</text>
+
+  <!-- Union Point Label -->
+  <text x="510" y="359" fill="#FFF59D">Aura Synthesis</text>
+  <text x="510" y="374" font-weight="normal" fill="#888">Astral hands join, generating charge</text>
+
+  <!-- Left Arm Label -->
+  <text x="510" y="469" fill="#00E5FF">Limb Delamination</text>
+  <text x="510" y="484" font-weight="normal" fill="#888">Left arm isolates and raises first</text>
+</g>
+
+
+<!-- ================================================================= -->
+<!-- ==================== MEDITATION GUIDE PANEL ===================== -->
+<!-- ================================================================= -->
+<g transform="translate(0, 0)">
+  <!-- Panel Glass Frame -->
+  <rect x="30" y="770" width="660" height="145" rx="14" fill="#111116" stroke="#2c2c35" stroke-width="1.5" />
+  
+  <!-- PHASE 1 TEXTS (0s - 4s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="1; 1; 0; 0; 0" keyTimes="0; 0.15; 0.17; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#00E5FF" text-anchor="middle" filter="url(#glow)">
+      PHASE 1: ENTER INDUCED FLOATATION
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Lie down on your back. Breathe smoothly and calm your nervous system.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFFFFF" font-weight="bold" text-anchor="middle">
+      "Relax your senses until you feel a profound sensation of floating."
+    </text>
+  </g>
+
+  <!-- PHASE 2 & 3 TEXTS (4s - 12s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.16; 0.18; 0.48; 0.50; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#FF9100" text-anchor="middle" filter="url(#glow)">
+      PHASE 2: ISOLATE AND LIFT THE ASTRAL ARMS
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Lift your astral left arm. Next, raise the right and touch your own face.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#FFF59D" font-weight="bold" text-anchor="middle">
+      "Focus intensely on the visual and tactile feeling of separation."
+    </text>
+  </g>
+
+  <!-- PHASE 4 & 5 TEXTS (12s - 20s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.49; 0.51; 0.81; 0.83; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#00E676" text-anchor="middle" filter="url(#glow)">
+      PHASE 3: MERGE THE HANDS &amp; LIFT THE LEGS
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Bring both astral hands together. Then, repeat the separation with your legs.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#00E5FF" font-weight="bold" text-anchor="middle">
+      "Energy follows focus. The phantom sensation generates massive momentum."
+    </text>
+  </g>
+
+  <!-- PHASE 6 TEXTS (20s - 24s) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.82; 0.84; 0.98; 1" dur="24s" repeatCount="indefinite" />
+    <text x="360" y="805" font-family="sans-serif" font-size="15" font-weight="bold" fill="#AEEA00" text-anchor="middle" filter="url(#glow)">
+      PHASE 4: FLOAT THE COMPLETE ASTRAL VESSEL
+    </text>
+    <text x="360" y="835" font-family="sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">
+      Now, picture your entire astral double floating directly above the physical bed.
+    </text>
+    <text x="360" y="865" font-family="sans-serif" font-size="13" font-style="italic" fill="#AEEA00" font-weight="bold" text-anchor="middle">
+      "Shift your point of consciousness to the floating form. Stay there."
+    </text>
+  </g>
+</g>
+
+<!-- Side notes -->
+<text x="40" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="40" dy="0" fill="#00E5FF" font-weight="bold">Stepping Stone:</tspan>
+  <tspan x="40" dy="18">This training routine helps</tspan>
+  <tspan x="40" dy="18">your mind adjust slowly</tspan>
+  <tspan x="40" dy="18">without trigger reflexes.</tspan>
+</text>
+
+<text x="480" y="700" font-family="sans-serif" font-size="11" fill="#666" width="150" opacity="0.8">
+  <tspan x="480" dy="0" fill="#FFF59D" font-weight="bold">Limb Weight:</tspan>
+  <tspan x="480" dy="18">Astral limbs are felt as</tspan>
+  <tspan x="480" dy="18">lighter, buzzing weight,</tspan>
+  <tspan x="480" dy="18">free from gravitational drag.</tspan>
+</text>
+
+</svg>
+</body>
+</html>
